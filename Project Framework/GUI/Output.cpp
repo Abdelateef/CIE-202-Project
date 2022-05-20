@@ -80,6 +80,7 @@ void Output::CreateDrawToolBar() const
 	//To control the order of these images in the menu, 
 	//reoder them in UI_Info.h ==> enum DrawMenuItem
 	string MenuItemImages[DRAW_ITM_COUNT];
+	MenuItemImages[ITM_LINE] = "images\\MenuItems\\Menu_Line.jpg";
 	MenuItemImages[ITM_RECT] = "images\\MenuItems\\Menu_Rect.jpg";
 	MenuItemImages[ITM_CIRC] = "images\\MenuItems\\Menu_Circ.jpg";
 	MenuItemImages[ITM_TRIA] = "images\\MenuItems\\Menu_Tria.jpg";
@@ -198,6 +199,33 @@ void Output::DrawTria(Point P1, Point P2, Point P3, GfxInfo TriaGfxInfo, bool se
 
 
 }
+
+
+
+void Output::DrawLine(Point P1, Point P2, GfxInfo LineGfxInfo, bool selected) const
+{
+	color DrawingClr;
+	if (selected)
+		DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
+	else
+		DrawingClr = LineGfxInfo.DrawClr;
+
+	pWind->SetPen(DrawingClr, LineGfxInfo.BorderWdth);	//Set Drawing color & width
+
+	drawstyle style;
+	if (LineGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(LineGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+
+
+	pWind->DrawLine(P1.x, P1.y, P2.x, P2.y, style);
+
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 Output::~Output()

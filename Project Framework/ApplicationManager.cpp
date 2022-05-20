@@ -1,7 +1,7 @@
 #include "ApplicationManager.h"
 #include "Actions\AddRectAction.h"
 #include "Actions\AddTriaAction.h"
-
+#include "Actions\AddLineAction.h"
 
 
 //Constructor
@@ -35,17 +35,17 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	//According to Action Type, create the corresponding action object
 	switch (ActType)
 	{
+
+	case DRAW_LINE:
+		pAct = new AddLineAction(this);
+		break;
 	case DRAW_RECT:
 		pAct = new AddRectAction(this);
 		break;
 	case DRAW_TRI:
 		pAct = new AddTriaAction(this);
 		break;
-
-	case DRAW_LINE:
-		///create AddLineAction here
-
-		break;
+		
 
 	case EXIT:
 		///create ExitAction here

@@ -21,7 +21,7 @@ public:
 	// -- Figures Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected = false) const;  //Draw a rectangle
 	void DrawTria(Point P1, Point P2, Point P3, GfxInfo TriaGfxInfo, bool selected = false) const; // Draw a triangle
-
+	void DrawLine(Point P1, Point P2, GfxInfo LineGfxInfo, bool selected = false) const;  //Draw a Line 
 	///Make similar functions for drawing all other figures.
 
 	void PrintMessage(string msg) const;	//Print a message on Status bar

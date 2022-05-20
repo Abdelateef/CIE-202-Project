@@ -151,6 +151,12 @@
     <ClCompile Include="Figures\CTriangle.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Figures\CLine.cpp">
+      <Filter>Figures Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\AddLineAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -243,6 +249,12 @@
     </ClInclude>
     <ClInclude Include="Figures\CTriangle.h">
       <Filter>Figures Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\CLine.h">
+      <Filter>Figures Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\AddLineAction.h">
+      <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
