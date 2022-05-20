@@ -1,5 +1,4 @@
-#ifndef CRECT_H
-#define CRECT_H
+#pragma once
 
 #include "CFigure.h"
 
@@ -12,5 +11,3 @@ public:
 	CLine(Point , Point, GfxInfo FigureGfxInfo );
 	virtual void Draw(Output* pOut) const;
 };
-
-#endif

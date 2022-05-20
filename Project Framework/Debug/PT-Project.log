@@ -1,6 +1,5 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  ApplicationManager.cpp
+  CLine.cpp
   AddLineAction.cpp
   Generating Code...
-AddLineAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe
