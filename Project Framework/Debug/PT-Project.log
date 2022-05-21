@@ -1,5 +1,16 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  main.cpp
+  Output.cpp
+  Input.cpp
+  CTriangle.cpp
+  CRectangle.cpp
   CLine.cpp
+  CFigure.cpp
+  CCircle.cpp
+  ApplicationManager.cpp
+  AddTriaAction.cpp
+  AddRectAction.cpp
   AddLineAction.cpp
+  AddCircAction.cpp
   Generating Code...
   PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe

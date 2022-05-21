@@ -2,7 +2,7 @@
 #include "Actions\AddRectAction.h"
 #include "Actions\AddTriaAction.h"
 #include "Actions\AddLineAction.h"
-
+#include "Actions\AddCircAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -44,6 +44,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case DRAW_TRI:
 		pAct = new AddTriaAction(this);
+		break;
+	case DRAW_CIRC:
+		pAct = new AddCircAction(this);
 		break;
 		
 

@@ -226,6 +226,26 @@ void Output::DrawLine(Point P1, Point P2, GfxInfo LineGfxInfo, bool selected) co
 
 }
 
+void Output::DrawCirc(Point P1, Point P2 , GfxInfo CircGfxInfo, bool selected) const {
+	color DrawingClr;
+	if (selected)
+		DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
+	else
+		DrawingClr = CircGfxInfo.DrawClr;
+
+	pWind->SetPen(DrawingClr, CircGfxInfo.BorderWdth);	//Set Drawing color & width
+
+	drawstyle style;
+	if (CircGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(CircGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+	pWind->DrawCircle(P1.x, P1.y, (P2.x-P1.x), style);
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 Output::~Output()
