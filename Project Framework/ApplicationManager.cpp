@@ -48,7 +48,6 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case DRAW_CIRC:
 		pAct = new AddCircAction(this);
 		break;
-		
 
 	case EXIT:
 		///create ExitAction here
@@ -109,7 +108,7 @@ Output* ApplicationManager::GetOutput() const
 {
 	return pOut;
 }
-////////////////////////////////////////////////////////////////////////////////////
+
 //Destructor
 ApplicationManager::~ApplicationManager()
 {

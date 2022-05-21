@@ -6,6 +6,7 @@
 #include "GUI\input.h"
 #include "GUI\output.h"
 
+
 //Main class that manages everything in the application.
 class ApplicationManager
 {
@@ -18,6 +19,7 @@ private:
 	//Pointers to Input and Output classes
 	Input *pIn;
 	Output *pOut;
+
 
 public:	
 	ApplicationManager(); 
@@ -35,6 +37,10 @@ public:
 	// -- Interface Management Functions
 	Input *GetInput() const; //Return pointer to the input
 	Output *GetOutput() const; //Return pointer to the output
+
+
+
+
 	void UpdateInterface() const;	//Redraws all the drawing window	
 };
 

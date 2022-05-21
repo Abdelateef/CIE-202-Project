@@ -20,10 +20,11 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_LINE,		// Line item in menu
 	ITM_RECT,		//Recangle item in menu
 	ITM_CIRC,		//Circle item in menu
-	ITM_TRIA,		//Triangle item in menu 
+	ITM_TRIA,		//Triangle item in menu
 
 	//TODO: Add more items names here
-
+	ITM_UNDO,		// Undo item in menu
+	ITM_REDO,		// Redo Item in Menu
 	ITM_EXIT,		//Exit item
 
 	DRAW_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
