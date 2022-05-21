@@ -41,7 +41,7 @@ void AddCircAction::Execute()
 	//This action needs to read some parameters first
 	ReadActionParameters();
 	
-	//Create a rectangle with the parameters read from the user
+	//Create a Circle with the parameters read from the user
 	CCircle *R=new CCircle(P1, P2, CircGfxInfo);
 
 	//Add the Line to the list of figures
