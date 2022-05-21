@@ -13,6 +13,7 @@
   mousequeue.cpp
   keyqueue.cpp
   image.cpp
+<<<<<<< HEAD
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
   CMUgraphics.cpp
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
@@ -23,6 +24,18 @@ C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\CM
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+=======
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
+  CMUgraphics.cpp
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+>>>>>>> ffef55b0927a9fa620bd30e826b9f734c15708f2
   auxil.cpp
   AddTriaAction.cpp
   AddLineAction.cpp
@@ -34,15 +47,25 @@ cl : command line warning D9035: option 'Gm' has been deprecated and will be rem
   jquant1.c
   jmemnobs.c
   jmemmgr.c
+<<<<<<< HEAD
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jmemmgr.c(1103,19): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jmemmgr.c(1106,11): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+=======
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jmemmgr.c(1103,19): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jmemmgr.c(1106,11): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+>>>>>>> ffef55b0927a9fa620bd30e826b9f734c15708f2
   jidctred.c
   jidctint.c
   jidctfst.c
   jidctflt.c
   jerror.c
+<<<<<<< HEAD
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jerror.c(169,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jerror.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+=======
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jerror.c(169,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpeg\jerror.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+>>>>>>> ffef55b0927a9fa620bd30e826b9f734c15708f2
   jdtrans.c
   jdsample.c
   jdpostct.c
@@ -64,7 +87,14 @@ C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jp
   jcparam.c
   jcomapi.c
   jpegload.c
+<<<<<<< HEAD
 C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\CMUgraphicsLib\jpegload.c(23,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Generating Code...
 AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\Debug\PT Project.exe
+=======
+D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpegload.c(23,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe
+>>>>>>> ffef55b0927a9fa620bd30e826b9f734c15708f2
