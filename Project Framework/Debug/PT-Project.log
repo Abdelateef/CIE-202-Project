@@ -1,7 +1,6 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  main.cpp
-  ApplicationManager.cpp
   Output.cpp
+<<<<<<< HEAD
   Input.cpp
   CTriangle.cpp
   AddRectAction.cpp
@@ -98,3 +97,6 @@ D:\github c++\CIE-202-Project\Project Framework\CMUgraphicsLib\jpegload.c(23,12)
 AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe
 >>>>>>> ffef55b0927a9fa620bd30e826b9f734c15708f2
+=======
+  PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe
+>>>>>>> 53b36555f222482d426391e0aef41c71e978d33b
