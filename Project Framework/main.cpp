@@ -17,6 +17,7 @@ int main()
 		AppManager.ExecuteAction(ActType);
 
 		//Update the interface
+		//point
 		AppManager.UpdateInterface();	
 
 	}while(ActType != EXIT);
