@@ -16,13 +16,13 @@ Output::Output()
 	UI.ToolBarHeight = 50;
 	UI.MenuItemWidth = 80;
 
-	UI.DrawColor = BLUE;	//Drawing color
-	UI.FillColor = GREEN;	//Filling color
+	UI.DrawColor = MAROON;	//Drawing color
+	UI.FillColor = GREY;	//Filling color
 	UI.MsgColor = RED;		//Messages color
-	UI.BkGrndColor = LIGHTGOLDENRODYELLOW;	//Background color
+	UI.BkGrndColor = SNOW;	//Background color
 	UI.HighlightColor = MAGENTA;	//This color should NOT be used to draw figures. use if for highlight only
 	UI.StatusBarColor = TURQUOISE;
-	UI.PenWidth = 3;	//width of the figures frames
+	UI.PenWidth = 5;	//width of the figures frames
 
 
 	//Create the output window
