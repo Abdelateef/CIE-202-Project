@@ -25,9 +25,20 @@ bool CRectangle::isWithinMe(Point click) {
 	int newx = click.x;
 	int newy = click.y;
 
+
+
 	int deltaxranglenewx = newx - refrancepointx;
 	int deltaytrangenewy = newy - refrancepointy;
 
+	if (deltaxranglenewx < 0)
+	{
+		deltaxranglenewx = refrancepointx;
+	}
+
+	if (deltaytrangenewy < 0)
+	{
+		deltaytrangenewy = refrancepointy;
+	}
 
 	if (deltaxranglenewx <= deltaxranglex && deltaytrangenewy <= deltaytrangey) return true;
 	else

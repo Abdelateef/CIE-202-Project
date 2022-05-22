@@ -14,5 +14,5 @@ void CTriangle::Draw(Output* pOut) const
 }
 
 bool CTriangle::isWithinMe(Point click) {
-	return true;
+	return false;
 }
