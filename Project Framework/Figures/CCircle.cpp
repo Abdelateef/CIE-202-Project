@@ -15,12 +15,16 @@ void CCircle::Draw(Output* pOut) const
 
 bool CCircle::isWithinMe(Point click)
 {
-	int x = click.x;
-	int y = click.y;
-	int dx = Corner1.x - Corner2.x;
-	int radius = dx;
+	int radius = Corner1.x - Corner2.x;
+	
+	int calc = (click.x - Corner1.x) * (click.x - Corner1.x) + (click.y - Corner1.y)* (click.y - Corner1.y);
 
-	if (x * x + y * y <= (radius * radius)) return true;
+	if (calc<(radius*radius))
+	{
+		return true;
+	}
 	else
+	{
 		return false;
+	}
 }
