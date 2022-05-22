@@ -17,5 +17,16 @@ void CLine::Draw(Output* pOut) const
 
 bool CLine::isWithinMe(Point click)
 {
-		return true;
+
+	int newx = click.x;
+	int newy = click.y;
+
+	double m1 = (Corner1.x - Corner2.x) / (Corner1.y - Corner2.y);
+
+	double m2 = (Corner1.x - newx) / (Corner1.y - newy);
+
+
+	if (m1 == m2) return true;
+	else
+		return false;
 }
