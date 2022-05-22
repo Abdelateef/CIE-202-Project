@@ -15,32 +15,20 @@ void CRectangle::Draw(Output* pOut) const
 
 bool CRectangle::isWithinMe(Point click) {
 
-	int refrancepointx = Corner1.x;
-	int refrancepointy = Corner1.y;
+	int x1=Corner1.x;
+	int y1=Corner1.y;
 
-	int deltaxranglex = Corner2.x - refrancepointx;
-	int deltaytrangey = Corner2.y - refrancepointy;
-
-
-	int newx = click.x;
-	int newy = click.y;
+	int x2 = Corner2.x;
+	int y2 = Corner2.y;
 
 
+	int x=click.x;
+	int y=click.y;
 
-	int deltaxranglenewx = newx - refrancepointx;
-	int deltaytrangenewy = newy - refrancepointy;
+	if (x > x1 && x < x2 && y > y1 && y < y2)
+		return true;
 
-	if (deltaxranglenewx < 0)
-	{
-		deltaxranglenewx = refrancepointx;
-	}
+	return false;
 
-	if (deltaytrangenewy < 0)
-	{
-		deltaytrangenewy = refrancepointy;
-	}
 
-	if (deltaxranglenewx <= deltaxranglex && deltaytrangenewy <= deltaytrangey) return true;
-	else
-		return false;
 }
