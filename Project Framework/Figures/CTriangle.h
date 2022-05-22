@@ -9,5 +9,5 @@ private:
 public:
 	CTriangle(Point, Point,Point, GfxInfo FigureGfxInfo);
 	virtual void Draw(Output* pOut) const;
-
+	bool isWithinMe(Point click);
 };

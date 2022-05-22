@@ -12,3 +12,7 @@ void CTriangle::Draw(Output* pOut) const
 	//Call Output::DrawRect to draw a Triangle on the screen	
 	pOut->DrawTria(Corner1, Corner2,Corner3, FigGfxInfo, Selected);
 }
+
+bool CTriangle::isWithinMe(Point click) {
+	return true;
+}

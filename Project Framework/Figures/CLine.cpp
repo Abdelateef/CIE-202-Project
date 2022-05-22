@@ -12,3 +12,10 @@ void CLine::Draw(Output* pOut) const
 	//Call Output::DrawRect to draw a Line on the screen	
 	pOut->DrawLine(Corner1, Corner2, FigGfxInfo, Selected);
 }
+
+
+
+bool CLine::isWithinMe(Point click)
+{
+		return true;
+}

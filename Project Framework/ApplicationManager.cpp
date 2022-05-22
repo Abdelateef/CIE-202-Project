@@ -3,6 +3,7 @@
 #include "Actions\AddTriaAction.h"
 #include "Actions\AddLineAction.h"
 #include "Actions\AddCircAction.h"
+#include"Actions\SelectAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -47,6 +48,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case DRAW_CIRC:
 		pAct = new AddCircAction(this);
+		break;
+	case SELECT:
+		pAct = new SelectAction(this);
 		break;
 
 	case EXIT:
@@ -108,6 +112,17 @@ Output* ApplicationManager::GetOutput() const
 {
 	return pOut;
 }
+
+/////////////////////////////////////////////////////////////////
+void  ApplicationManager::GetFigureList(CFigure* FigureListNew[]) {
+	for (int i = 0; i < MaxFigCount; i++) {
+		FigureListNew[i] = FigList[i];
+	}
+}
+
+
+
+
 
 //Destructor
 ApplicationManager::~ApplicationManager()

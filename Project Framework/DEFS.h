@@ -23,6 +23,7 @@ enum ActionType //The actions supported (you can add more if needed)
 	LOAD,			//Load a graph from a file
 	UNDO,			//Undo the actions
 	REDO,			//Redo the actions
+	SELECT,			//Select action
 	EXIT,			//Exit the application
 
 
@@ -37,7 +38,16 @@ enum ActionType //The actions supported (you can add more if needed)
 };
 
 struct Point	//To be used for figures points
-{ int x,y; };
+{
+	int x,y;
+	Point(int xx, int yy) {
+		x = xx;
+		y = yy;
+	}
+
+	Point() {
+	}
+};
 
 struct GfxInfo	//Graphical info of each figure (you may add more members)
 {

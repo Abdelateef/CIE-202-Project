@@ -14,14 +14,15 @@ class ApplicationManager
 
 private:
 	int FigCount;		//Actual number of figures
-	CFigure* FigList[MaxFigCount];	//List of all figures (Array of pointers)
-
-	//Pointers to Input and Output classes
+	CFigure* FigList[MaxFigCount];//Pointers to Input and Output classes
 	Input *pIn;
 	Output *pOut;
 
 
 public:	
+
+
+
 	ApplicationManager(); 
 	~ApplicationManager();
 	
@@ -39,7 +40,7 @@ public:
 	Output *GetOutput() const; //Return pointer to the output
 
 
-
+	void GetFigureList(CFigure* FigureListNew[]);
 
 	void UpdateInterface() const;	//Redraws all the drawing window	
 };
