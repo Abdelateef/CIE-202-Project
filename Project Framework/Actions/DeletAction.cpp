@@ -23,7 +23,7 @@ void DeletAction::ReadActionParameters() {
 		pOut->PrintMessage("No Figure to delete!");
 	}
 	else {
-				CFigure* FigureList[200];
+		CFigure* FigureList[200];
 		pManager->GetFigureList(FigureList);
 		for (int i = 0; i < 200; i++) {
 			if (FigureList[i] == nullptr) {

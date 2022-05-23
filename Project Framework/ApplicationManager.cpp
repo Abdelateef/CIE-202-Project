@@ -132,9 +132,14 @@ int ApplicationManager::GetFigurecount() {
 /////////////////////////
 
 void ApplicationManager::MakeFigNull(CFigure* fig) {
+	bool found = 0;
 	for (int i = 0; i < MaxFigCount; i++) {
 		if (FigList[i] == fig) {
 			FigList[i] = nullptr;
+			found = 1;
+		}
+		if (found && i + 1 != MaxFigCount) {
+			FigList[i] = FigList[i + 1];
 		}
 	}
 		FigCount--;
