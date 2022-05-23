@@ -56,6 +56,8 @@ void SelectAction::ReadActionParameters() {
 				{
 					pOut->PrintMessage("Line selected");
 				}
+				
+				break;
 			}
 			else {
 				pOut->PrintMessage("Please select a figure");
