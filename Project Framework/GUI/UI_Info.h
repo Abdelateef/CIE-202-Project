@@ -27,7 +27,7 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_UNDO,		// Undo item in menu
 	ITM_REDO,		// Redo Item in Menu
 	ITM_EXIT,		//Exit item
-
+	ITM_COLOR,
 	DRAW_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
 
 };
