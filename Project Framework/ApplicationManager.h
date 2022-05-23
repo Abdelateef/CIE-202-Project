@@ -39,8 +39,13 @@ public:
 	Input *GetInput() const; //Return pointer to the input
 	Output *GetOutput() const; //Return pointer to the output
 
+	////////////////////////////////////////////////////////////////
+	void GetFigureList(CFigure* FigureListNew[]); ////Get Figure List
 
-	void GetFigureList(CFigure* FigureListNew[]);
+	int GetFigurecount(); ///// Getfigure count
+	void MakeFigNull(CFigure* fig);
+
+
 
 	void UpdateInterface() const;	//Redraws all the drawing window	
 };

@@ -56,11 +56,12 @@ void SelectAction::ReadActionParameters() {
 				{
 					pOut->PrintMessage("Line selected");
 				}
-				
+				FigureList[i]->SetSelected(true);
 				break;
 			}
 			else {
 				pOut->PrintMessage("Please select a figure");
+				FigureList[i]->SetSelected(false);
 			}
 		}
 	}

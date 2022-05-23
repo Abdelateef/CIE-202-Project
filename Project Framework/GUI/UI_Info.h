@@ -22,7 +22,8 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_CIRC,		//Circle item in menu
 	ITM_TRIA,		//Triangle item in menu
 	ITM_SELECT,
-	//TODO: Add more items names here
+	//TODO: Add more items names here4
+	ITM_DELET,
 	ITM_UNDO,		// Undo item in menu
 	ITM_REDO,		// Redo Item in Menu
 	ITM_EXIT,		//Exit item

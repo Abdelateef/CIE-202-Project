@@ -4,6 +4,7 @@
 #include "Actions\AddLineAction.h"
 #include "Actions\AddCircAction.h"
 #include"Actions\SelectAction.h"
+#include "Actions/DeletAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -51,6 +52,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case SELECT:
 		pAct = new SelectAction(this);
+		break;
+	case DEL:
+		pAct = new DeletAction(this);
 		break;
 
 	case EXIT:
@@ -121,6 +125,23 @@ void  ApplicationManager::GetFigureList(CFigure* FigureListNew[]) {
 }
 
 
+int ApplicationManager::GetFigurecount() {
+	return FigCount;
+}
+
+/////////////////////////
+
+void ApplicationManager::MakeFigNull(CFigure* fig) {
+	for (int i = 0; i < MaxFigCount; i++) {
+		if (FigList[i] == fig) {
+			FigList[i] = nullptr;
+		}
+	}
+		FigCount--;
+		pOut->ClearDrawArea();
+		UpdateInterface();
+
+}
 
 
 
