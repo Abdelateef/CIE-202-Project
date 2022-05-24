@@ -13,6 +13,7 @@ void CCircle::Draw(Output* pOut) const
 	pOut->DrawCirc(Corner1, Corner2, FigGfxInfo, Selected);
 }
 
+
 bool CCircle::isWithinMe(Point click)
 {
 	int radius = Corner1.x - Corner2.x;

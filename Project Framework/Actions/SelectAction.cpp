@@ -32,39 +32,82 @@ void SelectAction::ReadActionParameters() {
 	Point click(x, y);
 	CFigure* FigureList[200];
 	pManager->GetFigureList(FigureList);
-	
-	
-	for (int i = 0; i < 200; i++) {
-		// If there is a figures inside the drawing area, proceed
-		if (FigureList[i] != nullptr) {
 
-			if (FigureList[i]->isWithinMe(click))
-			{
-				if (instanceof<CCircle>(FigureList[i]))
+	
+		for (int i = 0; i < 200; i++) {
+			// If there is a figures inside the drawing area, proceed
+			if (FigureList[i] != nullptr) {
+
+				if (FigureList[i]->isWithinMe(click))
 				{
-					pOut->PrintMessage("Circle selected");
+					if (instanceof<CCircle>(FigureList[i]))
+					{
+						if (FigureList[i]->IsSelected() == true)
+						{
+							FigureList[i]->SetSelected(false);
+							break;
+						}
+						pOut->PrintMessage("Circle selected    ID is " + to_string(pManager->GetFigurecount()));
+						FigureList[i]->SetSelected(true);
+					}
+					else if (instanceof<CTriangle>(FigureList[i]))
+					{
+						if (FigureList[i]->IsSelected() == true)
+						{
+							FigureList[i]->SetSelected(false);
+							break;
+						}
+						pOut->PrintMessage("triangle selected    ID is " + to_string(pManager->GetFigurecount()));
+						
+					}
+					else if (instanceof<CRectangle>(FigureList[i]))
+					{
+						if (FigureList[i]->IsSelected() == true)
+						{
+							FigureList[i]->SetSelected(false);
+							break;
+						}
+						pOut->PrintMessage("Rectangle selected");
+						
+					}
+					else if (instanceof<CLine>(FigureList[i]))
+					{
+						if (FigureList[i]->IsSelected() == true)
+						{
+							FigureList[i]->SetSelected(false);
+							break;
+						}
+						pOut->PrintMessage("Line selected");
+						
+					}
+					FigureList[i]->SetSelected(true);
+					
+					break;
 				}
-				else if (instanceof<CTriangle>(FigureList[i]))
-				{
-					pOut->PrintMessage("Triangle selected");
+				
+				else {
+					for (int i = 0; i < 200; i++)
+					{
+						if (FigureList[i]!=nullptr)
+						{
+							if (FigureList[i]->IsSelected()==true)
+							{
+								break;
+							}
+							else
+							{
+								pOut->PrintMessage("Please select a figure");
+								FigureList[i]->SetSelected(false);
+							}
+						}
+						
+					}
+					
+					
 				}
-				else if (instanceof<CRectangle>(FigureList[i]))
-				{
-					pOut->PrintMessage("Rectangle selected");
-				}
-				else if (instanceof<CLine>(FigureList[i]))
-				{
-					pOut->PrintMessage("Line selected");
-				}
-				FigureList[i]->SetSelected(true);
-				break;
-			}
-			else {
-				pOut->PrintMessage("Please select a figure");
-				FigureList[i]->SetSelected(false);
 			}
 		}
-	}
+	
 }
 
 void SelectAction::Execute() {

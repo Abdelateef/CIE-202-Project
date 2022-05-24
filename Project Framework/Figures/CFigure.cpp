@@ -4,6 +4,8 @@ CFigure::CFigure(GfxInfo FigureGfxInfo)
 { 
 	FigGfxInfo = FigureGfxInfo;	//Default status is non-filled.
 	Selected = false;
+	objcount++;
+	
 }
 
 void CFigure::SetSelected(bool s)
@@ -19,4 +21,14 @@ void CFigure::ChngFillClr(color Fclr)
 {	
 	FigGfxInfo.isFilled = true;
 	FigGfxInfo.FillClr = Fclr; 
+}
+
+void CFigure::setcount()
+{
+	ID = objcount;
+}
+
+int CFigure :: objcountreturn()
+{
+	return ID;
 }

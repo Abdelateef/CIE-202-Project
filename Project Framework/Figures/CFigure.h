@@ -11,18 +11,23 @@ protected:
 	int ID;		//Each figure has an ID
 	bool Selected;	//true if the figure is selected.
 	GfxInfo FigGfxInfo;	//Figure graphis info
-	
+	int objcount = 0;
 	/// Add more parameters if needed.
 
 public:
 	CFigure(GfxInfo FigureGfxInfo);
 	void SetSelected(bool s);	//select/unselect the figure
+	int counter();
 	bool IsSelected() const;	//check whether fig is selected
 
 	virtual void Draw(Output* pOut) const  = 0 ;		//Draw the figure
 	
 	void ChngDrawClr(color Dclr);	//changes the figure's drawing color
 	void ChngFillClr(color Fclr);	//changes the figure's filling color
+
+	void setcount();
+
+	int objcountreturn();
 
 	///The following functions should be supported by the figure class
 	///It should be overridden by each inherited figure
