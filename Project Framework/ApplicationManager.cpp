@@ -4,7 +4,7 @@
 #include "Actions\AddLineAction.h"
 #include "Actions\AddCircAction.h"
 #include"Actions\SelectAction.h"
-#include "Actions/DeletAction.h"
+#include "Actions\DeletAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -56,6 +56,31 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case DEL:
 		pAct = new DeletAction(this);
 		break;
+	case CHNG_DRAW_CLR:
+		if (SelectedFig.size() != 0)
+		{
+			pAct = new ChangeFigureColors(this, MODE_DRAW_COLOR);
+			break;
+		}
+		else
+		{
+			pOut->CreateColorToolBar(1);
+			pAct = new ChangeCurrentColors(this);
+			break;
+		}
+
+	case CHNG_FILL_CLR:
+		if (SelectedFig.size() != 0)
+		{
+			pAct = new ChangeFigureColors(this, MODE_FILL_COLOR);
+			break;
+		}
+		else
+		{
+			pOut->CreateColorToolBar(0);
+			pAct = new ChangeCurrentColors(this);
+			break;
+		}
 
 	case EXIT:
 		///create ExitAction here
