@@ -2,7 +2,7 @@
 #define ACTION_H
 
 #include "..\DefS.h"
-
+#include "Action.h"
 class ApplicationManager; //forward class declaration
 
 
@@ -14,7 +14,10 @@ protected:
 
 public:
 
-	Action(ApplicationManager *pApp) { pManager = pApp; }	//constructor
+	Action(ApplicationManager *pApp) 
+	{ 
+		pManager = pApp;
+	}	//constructor
 
 	//Reads parameters required for action to execute (code depends on action type)
 	virtual void ReadActionParameters() =0;

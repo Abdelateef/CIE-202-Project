@@ -69,10 +69,24 @@ void Output::ClearStatusBar() const
 	pWind->DrawRectangle(0, UI.height - UI.StatusBarHeight, UI.width, UI.height);
 }
 //////////////////////////////////////////////////////////////////////////////////////////
+void Output::ClearToolBar()const
+{
+	GfxInfo gfxInfo;
+	Point P1, P2;
+	P1.x = 0; P1.y = 0;
+	P2.x = UI.width; P2.y = UI.ToolBarHeight;
+	gfxInfo.DrawClr = WHITE;	//any color for border
+	gfxInfo.FillClr = WHITE;//any color for filling
+	gfxInfo.isFilled = true;//Figure is filled
+
+	DrawRect(P1, P2, gfxInfo, false);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
 void Output::CreateDrawToolBar() const
 {
 	UI.InterfaceMode = MODE_DRAW;
-
+	ClearToolBar();
 	//You can draw the tool bar icons in any way you want.
 	//Below is one possible way
 
@@ -107,7 +121,50 @@ void Output::CreateDrawToolBar() const
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////
+void Output::CreateColorToolBar() const
+{
+	ClearToolBar();
+	///TODO: write code to create Play mode menu
+	string MenuItemImages[COLOR_ITM_COUNT];
+	MenuItemImages[ITM_BLACK] = "images\\MenuItems\\black.jpg";
+	MenuItemImages[ITM_WHITE] = "images\\MenuItems\\white.jpg";
+	MenuItemImages[ITM_RED] = "images\\MenuItems\\red.jpg";
+	MenuItemImages[ITM_GREEN] = "images\\MenuItems\\green.jpg";
+	MenuItemImages[ITM_BLUE] = "images\\MenuItems\\blue.jpg";
+	MenuItemImages[ITM_BACK] = "images\\MenuItems\\back.jpg";
 
+	//TODO: Prepare images for each menu item and add it to the list
+
+	//Draw menu item one image at a time
+	for (int i = 0; i < COLOR_ITM_COUNT; i++)
+		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth, UI.ToolBarHeight);
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+void Output::CreateColorToolBar(int a) const
+{
+	if (a == 1)
+		UI.InterfaceMode = MODE_DRAW_COLOR;
+	else
+		UI.InterfaceMode = MODE_FILL_COLOR;
+	ClearToolBar();
+	///TODO: write code to create Play mode menu
+	string MenuItemImages[COLOR_ITM_COUNT];
+	MenuItemImages[ITM_BLACK] = "images\\MenuItems\\black.jpg";
+	MenuItemImages[ITM_WHITE] = "images\\MenuItems\\white.jpg";
+	MenuItemImages[ITM_RED] = "images\\MenuItems\\red.jpg";
+	MenuItemImages[ITM_GREEN] = "images\\MenuItems\\green.jpg";
+	MenuItemImages[ITM_BLUE] = "images\\MenuItems\\blue.jpg";
+	MenuItemImages[ITM_BACK] = "images\\MenuItems\\back.jpg";
+
+
+	//Draw menu item one image at a time
+	for (int i = 0; i < COLOR_ITM_COUNT; i++)
+		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth, UI.ToolBarHeight);
+	//Draw a line under the toolbar
+	//pWind->SetPen(RED, 3);
+	//pWind->DrawLine(0, UI.ToolBarHeight, UI.width, UI.ToolBarHeight);	
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
 void Output::CreatePlayToolBar() const
 {
 	UI.InterfaceMode = MODE_PLAY;
@@ -257,4 +314,73 @@ Output::~Output()
 {
 	delete pWind;
 }
+//////////////////////////////////////////////////////////////////////////////////////////
+void Output::ChangeDrawColor(ActionType ActType2)
+{
+	
+	switch (ActType2)
+	{
+	case SET_BLACK:
+		UI.DrawColor = BLACK;
+		CreateDrawToolBar();
+		break;
+	case SET_BLUE:
+		UI.DrawColor = BLUE;
+		CreateDrawToolBar();
+		break;
+	case SET_WHITE:
+		UI.DrawColor = WHITE;
+		CreateDrawToolBar();
+		break;
+	case SET_RED:
+		UI.DrawColor = RED;
+		CreateDrawToolBar();
+		break;
+	case SET_GREEN:
+		UI.DrawColor = GREEN;
+		CreateDrawToolBar();
+		break;
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+void Output::ChangeFillColor(ActionType ActType3)
+{
+	UI.filled_OR_not = true;
+	switch (ActType3)
+	{
+	case SET_BLACK:
+		UI.FillColor = BLACK;
+		CreateDrawToolBar();
+		break;
+	case SET_BLUE:
+		UI.FillColor = BLUE;
+		CreateDrawToolBar();
+		break;
+	case SET_WHITE:
+		UI.FillColor = WHITE;
+		CreateDrawToolBar();
+		break;
+	case SET_RED:
+		UI.FillColor = RED;
+		CreateDrawToolBar();
+		break;
+	case SET_GREEN:
+		UI.FillColor = GREEN;
+		CreateDrawToolBar();
+		break;
+	case EMPTY:
+		UI.filled_OR_not = false;
+		CreateDrawToolBar();
+		break;
+	case DRAWING_AREA:
+		UI.filled_OR_not = false;
+		CreateDrawToolBar();
+		break;
+
+
+	}
+}
+
 

@@ -32,9 +32,15 @@ enum ActionType //The actions supported (you can add more if needed)
 	EMPTY,			//A click on empty place in the toolbar
 
 	TO_DRAW,		//Switch interface to Draw mode
-	TO_PLAY			//Switch interface to Play mode
+	TO_PLAY,		//Switch interface to Play mode
 
 	///TODO: Add more action types (if needed)
+	SET_BLACK,        //Set the Black color 
+	SET_WHITE,        //Set the White color 
+	SET_RED,         //Set the Red color 
+	SET_GREEN,       //Set the Green color 
+	SET_BLUE,        // Set the Blue color 
+	BACK,            // Back to the tool bar 
 };
 
 struct Point	//To be used for figures points

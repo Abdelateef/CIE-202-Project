@@ -10,7 +10,9 @@
 enum GUI_MODE	//Graphical user interface mode
 {
 	MODE_DRAW,	//Drawing mode (startup mode)
-	MODE_PLAY	//Playing mode
+	MODE_PLAY,	//Playing mode
+	MODE_DRAW_COLOR, // Draw color mode 
+	MODE_FILL_COLOR // Fill color mode
 };
 
 enum DrawMenuItem //The items of the Draw menu (you should add more items)
@@ -27,7 +29,7 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_UNDO,		// Undo item in menu
 	ITM_REDO,		// Redo Item in Menu
 	ITM_EXIT,		//Exit item
-	ITM_COLOR,
+	ITM_COLOR,      // color item
 	DRAW_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
 
 };
@@ -43,8 +45,16 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 
 };
 
-
-
+enum SetColor
+{
+	ITM_BLACK,
+	ITM_WHITE,
+	ITM_RED,
+	ITM_GREEN,
+	ITM_BLUE,
+	ITM_BACK,
+	COLOR_ITM_COUNT
+};
 
 
 __declspec(selectany) //This line to prevent "redefinition error"
@@ -52,7 +62,7 @@ __declspec(selectany) //This line to prevent "redefinition error"
 struct UI_Info	//User Interface Info.
 {
 	GUI_MODE InterfaceMode;
-
+	bool filled_OR_not; // To know if the shape is filled or not 
 	int	width, height,	//Window width and height
 		wx, wy,			//Window starting coordinates
 		StatusBarHeight,	//Status Bar Height

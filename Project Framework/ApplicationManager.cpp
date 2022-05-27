@@ -5,7 +5,7 @@
 #include "Actions\AddCircAction.h"
 #include"Actions\SelectAction.h"
 #include "Actions\DeletAction.h"
-
+#include "Actions\ChangeCurrentColors.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -25,8 +25,9 @@ ApplicationManager::ApplicationManager()
 //==================================================================================//
 ActionType ApplicationManager::GetUserAction() const
 {
+	int x, y;
 	//Ask the input to get the action from the user.
-	return pIn->GetUserAction();
+	return pIn->GetUserAction(x,y);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Creates an action and executes it
@@ -57,31 +58,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		pAct = new DeletAction(this);
 		break;
 	case CHNG_DRAW_CLR:
-		if (SelectedFig.size() != 0)
-		{
-			pAct = new ChangeFigureColors(this, MODE_DRAW_COLOR);
-			break;
-		}
-		else
-		{
-			pOut->CreateColorToolBar(1);
-			pAct = new ChangeCurrentColors(this);
-			break;
-		}
-
-	case CHNG_FILL_CLR:
-		if (SelectedFig.size() != 0)
-		{
-			pAct = new ChangeFigureColors(this, MODE_FILL_COLOR);
-			break;
-		}
-		else
-		{
-			pOut->CreateColorToolBar(0);
-			pAct = new ChangeCurrentColors(this);
-			break;
-		}
-
+		UI.InterfaceMode = MODE_DRAW_COLOR;
+		pAct = new ChangeCurrentColors(this);
+		break;
 	case EXIT:
 		///create ExitAction here
 
