@@ -100,14 +100,10 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_TRIA] = "images\\MenuItems\\Menu_Tria.jpg";
 	MenuItemImages[ITM_SELECT] = "images\\MenuItems\\Menu_Select.jpg";
 	MenuItemImages[ITM_DELET] = "images\\MenuItems\\Menu_Delet.jpg";
-	MenuItemImages[ITM_COPY] = "images\\MenuItems\\Menu_Copy.jpg";
-	MenuItemImages[ITM_CUT] = "images\\MenuItems\\Menu_Cut.jpg";
-	MenuItemImages[ITM_PASTE] = "images\\MenuItems\\Menu_Paste.jpg";
 	MenuItemImages[ITM_REDO] = "images\\MenuItems\\Menu_Redo.jpg";
 	MenuItemImages[ITM_UNDO] = "images\\MenuItems\\Menu_Undo.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
 	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\Menu_Color.jpg";
-
 
 
 
