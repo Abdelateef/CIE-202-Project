@@ -5,12 +5,42 @@ F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+  ApplicationManager.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(7,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\DeletAction.h(4,21): error C2059: syntax error: 'public'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\DeletAction.h(5,1): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\DeletAction.h(5,1): error C2447: '{': missing function header (old-style formal list?)
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(10,1): error C2059: syntax error: '=='
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\CopyAction.h(4,20): error C2059: syntax error: 'public'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\CopyAction.h(5,1): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\CopyAction.h(5,1): error C2447: '{': missing function header (old-style formal list?)
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(16,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(19,1): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(19,1): error C2447: '{': missing function header (old-style formal list?)
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(66,14): error C2061: syntax error: identifier 'DeletAction'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(68,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(73,1): error C2059: syntax error: '=='
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(84,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(184,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(190,1): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(190,1): error C2447: '{': missing function header (old-style formal list?)
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(198,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(204,1): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(204,1): error C2447: '{': missing function header (old-style formal list?)
+  Output.cpp
+  Input.cpp
   CTriangle.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+  AddRectAction.cpp
   CRectangle.cpp
   CLine.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
@@ -25,26 +55,58 @@ F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
   CCircle.cpp
-<<<<<<< Updated upstream
-=======
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
-  ApplicationManager.cpp
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
->>>>>>> Stashed changes
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(14,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(18,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(20,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2143: syntax error: missing ';' before '}'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.cpp(33,19): error C2039: 'Clone': is not a member of 'CCircle'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(5): message : see declaration of 'CCircle'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.cpp(34,30): error C2065: 'Corner1': undeclared identifier
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.cpp(34,39): error C2065: 'Corner2': undeclared identifier
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.cpp(34,48): error C2065: 'FigGfxInfo': undeclared identifier
+  windowinput.cpp
+  mousequeue.cpp
+  keyqueue.cpp
+  image.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
+  CMUgraphics.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+  auxil.cpp
   SelectAction.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(14,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(18,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(20,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2143: syntax error: missing ';' before '}'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(43,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(45,6): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(54,6): error C2181: illegal else without matching if
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(109,1): error C2059: syntax error: '=='
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(130,4): error C2181: illegal else without matching if
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(132,16): error C2065: 'i': undeclared identifier
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(133,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(137,1): error C2059: syntax error: '}'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(137,1): error C2143: syntax error: missing ';' before '}'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(139,30): error C2143: syntax error: missing ';' before '{'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\SelectAction.cpp(139,30): error C2447: '{': missing function header (old-style formal list?)
   PasteAction.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
@@ -54,10 +116,6 @@ F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\PasteAction.cpp(34,7): error C2039: 'Drawpastefigures': is not a member of 'CFigure'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CFigure.h(9): message : see declaration of 'CFigure'
   DeletAction.cpp
-<<<<<<< Updated upstream
-  ChangeFigureColors.cpp
-  ChangeCurrentColors.cpp
-=======
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
@@ -69,39 +127,43 @@ F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+  Generating Code...
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(115): warning C4715: 'Input::GetUserAction': not all control paths return a value
+  Compiling...
   CopyAction.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
->>>>>>> Stashed changes
+  ChangeFigureColors.cpp
+  ChangeCurrentColors.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
   AddTriaAction.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
-  AddRectAction.cpp
   AddLineAction.cpp
-<<<<<<< Updated upstream
-=======
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
->>>>>>> Stashed changes
   AddCircAction.cpp
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(6,1): error C2504: 'CFigure': base class undefined
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2143: syntax error: missing ';' before '*'
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C2433: 'CRectangle::CFigure': 'virtual' not permitted on data declarations
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.h(14,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(14,1): error C2059: syntax error: '<<'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(18,26): error C2238: unexpected token(s) preceding ';'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(20,1): error C2059: syntax error: '>>'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2143: syntax error: missing ';' before '}'
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.h(21,1): error C2238: unexpected token(s) preceding ';'
   Generating Code...
-<<<<<<< Updated upstream
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(111): warning C4715: 'Input::GetUserAction': not all control paths return a value
-AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe
-=======
->>>>>>> Stashed changes

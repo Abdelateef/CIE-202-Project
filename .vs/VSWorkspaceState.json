@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Project Framework",
+    "\\Project Framework\\Actions",
+    "\\Project Framework\\Figures"
   ],
+  "SelectedNode": "\\Project Framework\\PT-Project.vcxproj",
   "PreviewInSolutionExplorer": false
 }
