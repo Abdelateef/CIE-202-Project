@@ -29,3 +29,19 @@ bool CCircle::isWithinMe(Point click)
 		return false;
 	}
 }
+void CCircle::Drawpastfigures(Output* pOut,Point Click) const {
+
+	Point Corner2New;
+	Corner2New.y = Click.y;
+	Corner2New.x = Click.x + abs(Corner2.x-Corner1.x);
+	pOut->DrawCirc(Click, Corner2New, FigGfxInfo, Selected==false);
+}
+
+
+CFigure* CCircle::Clone(Point click) {
+	Point Corner2New;
+	Corner2New.y = click.y;
+	Corner2New.x = click.x + abs(Corner2.x - Corner1.x);
+	CFigure* Temp = new CCircle(click, Corner2New, FigGfxInfo);
+	return Temp;
+}

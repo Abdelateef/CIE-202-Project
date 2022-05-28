@@ -6,6 +6,10 @@
 #include"Actions\SelectAction.h"
 #include "Actions\DeletAction.h"
 #include "Actions\ChangeCurrentColors.h"
+#include"Actions/CopyAction.h"
+#include"Actions/PasteAction.h"
+#include"Actions/CutAction.h"
+
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -56,6 +60,15 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case DEL:
 		pAct = new DeletAction(this);
+		break;
+	case COPY:
+		pAct = new CopyAction(this);
+		break;
+	case CUT:
+		pAct = new CutAction(this);
+		break;
+	case PASTE:
+		pAct = new PasteAction(this);
 		break;
 	case CHNG_DRAW_CLR:
 		UI.InterfaceMode = MODE_DRAW_COLOR;

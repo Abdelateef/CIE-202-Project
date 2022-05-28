@@ -21,7 +21,7 @@ private:
 
 public:	
 
-
+	CFigure* Copied_FigureList[200];
 
 	ApplicationManager(); 
 	~ApplicationManager();

@@ -25,3 +25,40 @@ bool CTriangle::isWithinMe(Point click) {
 	else
 		return false;
 }
+
+void CTriangle:: Drawpastfigures(Output* pOut,Point Click) const {
+	Point NewCorner1, NewCorner2, NewCorner3, MidlePoint;
+	NewCorner1 = Click;
+	int dispoint2x, dispoint2y, dispoint3x, dispoint3y;
+	dispoint2x = (Corner1.x - Corner2.x);
+	dispoint3x =( Corner1.x - Corner3.x);
+
+	dispoint2y = (Corner1.y - Corner2.y);
+	dispoint3y = (Corner1.y - Corner3.y);
+
+	NewCorner2.x = NewCorner1.x + (dispoint2x);
+	NewCorner2.y = NewCorner1.y + (dispoint2y);
+	NewCorner3.x = NewCorner1.x - (dispoint3x);
+	NewCorner3.y = NewCorner1.y - (dispoint2y);
+
+	pOut->DrawTria(NewCorner1, NewCorner2,NewCorner3, FigGfxInfo, Selected==false);
+}
+
+CFigure* CTriangle::Clone(Point click) {
+	Point NewCorner1, NewCorner2, NewCorner3, MidlePoint;
+	NewCorner1 = click;
+	int dispoint2x, dispoint2y, dispoint3x, dispoint3y;
+	dispoint2x = (Corner1.x - Corner2.x);
+	dispoint3x = (Corner1.x - Corner3.x);
+
+	dispoint2y = (Corner1.y - Corner2.y);
+	dispoint3y = (Corner1.y - Corner3.y);
+
+	NewCorner2.x = NewCorner1.x + (dispoint2x);
+	NewCorner2.y = NewCorner1.y + (dispoint2y);
+	NewCorner3.x = NewCorner1.x - (dispoint3x);
+	NewCorner3.y = NewCorner1.y - (dispoint2y);
+
+	CFigure* Temp = new CTriangle(NewCorner1, NewCorner2, NewCorner3, FigGfxInfo);
+	return Temp;
+}

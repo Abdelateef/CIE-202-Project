@@ -21,7 +21,7 @@ public:
 	bool IsSelected() const;	//check whether fig is selected
 
 	virtual void Draw(Output* pOut) const  = 0 ;		//Draw the figure
-	
+	virtual void Drawpastfigures(Output* pOut,Point Click) const = 0;
 	void ChngDrawClr(color Dclr);	//changes the figure's drawing color
 	void ChngFillClr(color Fclr);	//changes the figure's filling color
 
@@ -43,6 +43,8 @@ public:
 	//virtual void Load(ifstream &Infile) = 0;	//Load the figure parameters to the file
 
 	//virtual void PrintInfo(Output* pOut) = 0;	//print all figure info on the status bar
+
+	virtual CFigure* Clone(Point click) = 0;
 
 	virtual bool isWithinMe(Point click) = 0;
 	// Gets graphical info of the figures drawn
