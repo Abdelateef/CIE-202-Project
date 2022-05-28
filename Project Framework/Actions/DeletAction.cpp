@@ -19,7 +19,7 @@ void DeletAction::ReadActionParameters() {
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 
-	if (pManager->GetFigurecount() == 0 ) {
+	if (pManager->GetFigurecount() == 0){
 		pOut->PrintMessage("No Figure to delete!");
 	}
 	else {

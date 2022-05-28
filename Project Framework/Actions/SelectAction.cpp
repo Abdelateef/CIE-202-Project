@@ -40,7 +40,6 @@ void SelectAction::ReadActionParameters() {
 
 				if (FigureList[i]->isWithinMe(click))
 				{
-<<<<<<< Updated upstream
 					if (instanceof<CCircle>(FigureList[i]))
 					{
 						if (FigureList[i]->IsSelected() == true)
@@ -106,31 +105,6 @@ void SelectAction::ReadActionParameters() {
 					
 					
 				}
-=======
-					pOut->PrintMessage("Circle selected");
-					FigureList[i]->SetSelected(true);
-				}
-				else if (instanceof<CTriangle>(FigureList[i]))
-				{
-					pOut->PrintMessage("Triangle selected");
-					FigureList[i]->SetSelected(true);
-				}
-				else if (instanceof<CRectangle>(FigureList[i]))
-				{
-					pOut->PrintMessage("Rectangle selected");
-					FigureList[i]->SetSelected(true);
-				}
-				else if (instanceof<CLine>(FigureList[i]))
-				{
-					pOut->PrintMessage("Line selected");
-					FigureList[i]->SetSelected(true);
-				}
-				break;
-			}
-			else {
-				pOut->PrintMessage("Please select a figure");
-				FigureList[i]->SetSelected(false);
->>>>>>> Stashed changes
 			}
 		}
 	

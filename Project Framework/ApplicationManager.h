@@ -17,11 +17,11 @@ private:
 	CFigure* FigList[MaxFigCount];//Pointers to Input and Output classes
 	Input *pIn;
 	Output *pOut;
-	
+
 
 public:	
 
-	CFigure* Copied_FigureList[200];
+
 
 	ApplicationManager(); 
 	~ApplicationManager();
@@ -41,11 +41,10 @@ public:
 
 	////////////////////////////////////////////////////////////////
 	void GetFigureList(CFigure* FigureListNew[]); ////Get Figure List
-	void AppendtoFigureList();
+
 	int GetFigurecount(); ///// Getfigure count
 	void MakeFigNull(CFigure* fig);
-	int GetSelectedFigCount();
-	
+
 
 
 	void UpdateInterface() const;	//Redraws all the drawing window	

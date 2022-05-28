@@ -25,13 +25,3 @@ bool CTriangle::isWithinMe(Point click) {
 	else
 		return false;
 }
-
-CFigure* CTriangle::Clone() {
-	CFigure* Temp = new CTriangle(Corner1, Corner2, Corner3,FigGfxInfo);
-	return Temp;
-}
-
-
-//void CTriangle::Drawpastefigures(Point click) const {
-//
-//}
