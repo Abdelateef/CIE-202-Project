@@ -11,5 +11,11 @@ public:
 	CCircle(Point ,Point , GfxInfo FigureGfxInfo );
 	virtual void Draw(Output* pOut) const;
 	bool isWithinMe(Point click);
+<<<<<<< Updated upstream
 	
+=======
+	//A function create a clone of a figure
+	virtual CFigure* Clone();
+	/*virtual void Drawpastefigures(Point click) const;*/
+>>>>>>> Stashed changes
 };

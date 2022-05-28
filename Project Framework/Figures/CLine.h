@@ -11,4 +11,6 @@ public:
 	CLine(Point , Point, GfxInfo FigureGfxInfo );
 	virtual void Draw(Output* pOut) const;
 	bool isWithinMe(Point click);
+	virtual CFigure* Clone();
+	//virtual void Drawpastefigures(Point click) const;
 };

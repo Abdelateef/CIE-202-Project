@@ -4,8 +4,16 @@
 #include "Actions\AddLineAction.h"
 #include "Actions\AddCircAction.h"
 #include"Actions\SelectAction.h"
+<<<<<<< Updated upstream
 #include "Actions\DeletAction.h"
 #include "Actions\ChangeCurrentColors.h"
+=======
+#include "Actions/DeletAction.h"
+#include"Actions/CopyAction.h"
+#include"Actions/CutAction.h"
+#include"Actions/PasteAction.h"
+
+>>>>>>> Stashed changes
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -57,10 +65,23 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case DEL:
 		pAct = new DeletAction(this);
 		break;
+<<<<<<< Updated upstream
 	case CHNG_DRAW_CLR:
 		UI.InterfaceMode = MODE_DRAW_COLOR;
 		pAct = new ChangeCurrentColors(this);
 		break;
+=======
+	case COPY:
+		pAct = new CopyAction(this);
+		break;
+	case CUT:
+		pAct = new CutAction(this);
+		break;
+	case Paste:
+		pAct = new PasteAction(this);
+		break;
+
+>>>>>>> Stashed changes
 	case EXIT:
 		///create ExitAction here
 
@@ -127,6 +148,17 @@ void  ApplicationManager::GetFigureList(CFigure* FigureListNew[]) {
 }
 
 
+void  ApplicationManager::AppendtoFigureList() {
+	for (int i = 0; i < MaxFigCount; i++) {
+		if (FigList[i] == NULL) {
+			FigList[MaxFigCount-i] = Copied_FigureList[i];
+		}
+	}
+}
+
+
+
+
 int ApplicationManager::GetFigurecount() {
 	return FigCount;
 }
@@ -149,7 +181,21 @@ void ApplicationManager::MakeFigNull(CFigure* fig) {
 		UpdateInterface();
 
 }
+<<<<<<< Updated upstream
  
+=======
+///////////////////////////////////////////
+
+int ApplicationManager::GetSelectedFigCount()
+{
+	int cnt = 0;
+	for (int i = 0; i < 200; i++) {
+		if (FigList[i]->IsSelected() == true)
+			cnt++;
+	}
+	return cnt;
+}
+>>>>>>> Stashed changes
 
 
 

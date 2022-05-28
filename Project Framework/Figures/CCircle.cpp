@@ -29,3 +29,12 @@ bool CCircle::isWithinMe(Point click)
 		return false;
 	}
 }
+
+CFigure* CCircle::Clone() {
+	CFigure* Temp = new CCircle(Corner1, Corner2, FigGfxInfo);
+	return Temp;
+}
+
+//void CCircle::Drawpastefigures(Point click) const {
+//
+//}

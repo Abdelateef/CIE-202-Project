@@ -30,3 +30,13 @@ bool CLine::isWithinMe(Point click)
 	else
 		return false;
 }
+
+CFigure* CLine::Clone() {
+	CFigure* Temp = new CLine(Corner1, Corner2, FigGfxInfo);
+	return Temp;
+}
+
+
+//void CLine::Drawpastefigures(Point click) const {
+//
+//}
