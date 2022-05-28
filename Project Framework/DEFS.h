@@ -14,6 +14,9 @@ enum ActionType //The actions supported (you can add more if needed)
 	CHNG_FILL_CLR,	//Change the filling color
 	CHNG_BK_CLR,	//Change background color
 	DEL,			//Delete a figure(s)
+	COPY,			//Copy a Figure (s)
+	CUT,			// Cut a figure (s)
+	PASTE,			// Paste a Figure (s)
 	MOVE,			//Move a figure(s)
 	RESIZE,			//Resize a figure(s)
 	ROTATE,			//Rotate a figure(s)
