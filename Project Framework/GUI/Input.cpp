@@ -56,6 +56,9 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 			case ITM_LINE:return DRAW_LINE;
 			case ITM_SELECT:return SELECT;
 			case ITM_DELET: return DEL;
+			case ITM_COPY: return COPY;
+			case ITM_CUT: return CUT;
+			case ITM_PASTE: return PASTE;
 			case ITM_REDO:return REDO;
 			case ITM_UNDO:return UNDO;
 			case ITM_COLOR:return CHNG_DRAW_CLR;

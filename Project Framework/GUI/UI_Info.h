@@ -26,6 +26,9 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_SELECT,
 	//TODO: Add more items names here4
 	ITM_DELET,
+	ITM_COPY,		// Copy item in menu
+	ITM_CUT,		// Cut item in menu
+	ITM_PASTE,		// Paster item in menu
 	ITM_UNDO,		// Undo item in menu
 	ITM_REDO,		// Redo Item in Menu
 	ITM_EXIT,		//Exit item
