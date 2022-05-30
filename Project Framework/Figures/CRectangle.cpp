@@ -31,6 +31,7 @@ bool CRectangle::isWithinMe(Point click) {
 	return false;
 }
 
+
 void CRectangle::Drawpastfigures(Output* pOut,Point Click) const {
 	Point NewCorner1, NewCorner2;
 	int rectangle_Width = abs(Corner1.x - Corner2.x);

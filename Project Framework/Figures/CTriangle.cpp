@@ -29,17 +29,21 @@ bool CTriangle::isWithinMe(Point click) {
 void CTriangle:: Drawpastfigures(Output* pOut,Point Click) const {
 	Point NewCorner1, NewCorner2, NewCorner3, MidlePoint;
 	NewCorner1 = Click;
-	int dispoint2x, dispoint2y, dispoint3x, dispoint3y;
-	dispoint2x = (Corner1.x - Corner2.x);
-	dispoint3x =( Corner1.x - Corner3.x);
 
-	dispoint2y = (Corner1.y - Corner2.y);
-	dispoint3y = (Corner1.y - Corner3.y);
+	int pointxdistancecorner2, pointydistancecorner2;
+	pointxdistancecorner2 = (Corner1.x - Corner2.x);
+	pointydistancecorner2 = (Corner1.y - Corner2.y);
 
-	NewCorner2.x = NewCorner1.x + (dispoint2x);
-	NewCorner2.y = NewCorner1.y + (dispoint2y);
-	NewCorner3.x = NewCorner1.x - (dispoint3x);
-	NewCorner3.y = NewCorner1.y - (dispoint2y);
+	NewCorner2.x = NewCorner1.x - (pointxdistancecorner2);
+	NewCorner2.y = NewCorner1.y - (pointydistancecorner2);
+
+
+	int pointxdistancecorner3, pointydistancecorner3;
+	pointxdistancecorner3 = (Corner1.x - Corner3.x);
+	pointydistancecorner3 = (Corner1.y - Corner3.y);
+
+	NewCorner3.x = NewCorner1.x - (pointxdistancecorner3);
+	NewCorner3.y = NewCorner1.y - (pointydistancecorner3);
 
 	pOut->DrawTria(NewCorner1, NewCorner2,NewCorner3, FigGfxInfo, Selected==false);
 }
@@ -47,17 +51,21 @@ void CTriangle:: Drawpastfigures(Output* pOut,Point Click) const {
 CFigure* CTriangle::Clone(Point click) {
 	Point NewCorner1, NewCorner2, NewCorner3, MidlePoint;
 	NewCorner1 = click;
-	int dispoint2x, dispoint2y, dispoint3x, dispoint3y;
-	dispoint2x = (Corner1.x - Corner2.x);
-	dispoint3x = (Corner1.x - Corner3.x);
 
-	dispoint2y = (Corner1.y - Corner2.y);
-	dispoint3y = (Corner1.y - Corner3.y);
+	int pointxdistancecorner2, pointydistancecorner2;
+	pointxdistancecorner2 = (Corner1.x - Corner2.x);
+	pointydistancecorner2 = (Corner1.y - Corner2.y);
 
-	NewCorner2.x = NewCorner1.x + (dispoint2x);
-	NewCorner2.y = NewCorner1.y + (dispoint2y);
-	NewCorner3.x = NewCorner1.x - (dispoint3x);
-	NewCorner3.y = NewCorner1.y - (dispoint2y);
+	NewCorner2.x = NewCorner1.x - (pointxdistancecorner2);
+	NewCorner2.y = NewCorner1.y - (pointydistancecorner2);
+
+
+	int pointxdistancecorner3, pointydistancecorner3;
+	pointxdistancecorner3 = (Corner1.x - Corner3.x);
+	pointydistancecorner3 = (Corner1.y - Corner3.y);
+
+	NewCorner3.x = NewCorner1.x - (pointxdistancecorner3);
+	NewCorner3.y = NewCorner1.y - (pointydistancecorner3);
 
 	CFigure* Temp = new CTriangle(NewCorner1, NewCorner2, NewCorner3, FigGfxInfo);
 	return Temp;
