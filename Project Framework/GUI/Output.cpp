@@ -107,7 +107,7 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_UNDO] = "images\\MenuItems\\Menu_Undo.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
 	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\Menu_Color.jpg";
-
+	MenuItemImages[FILL_CLR] = "images\\MenuItems\\Menu_fillc.jpg";
 
 
 	//TODO: Prepare images for each menu item and add it to the list
@@ -350,6 +350,7 @@ void Output::ChangeDrawColor(ActionType ActType2)
 //////////////////////////////////////////////////////////////////////////////////////////
 void Output::ChangeFillColor(ActionType ActType3)
 {
+
 	UI.filled_OR_not = true;
 	switch (ActType3)
 	{

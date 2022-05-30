@@ -25,7 +25,10 @@ void AddLineAction::ReadActionParameters()
 	//Read 2nd corner and store in point P2
 	pIn->GetPointClicked(P2.x, P2.y);
 
-	LineGfxInfo.isFilled = false;	//default is not filled
+	if (UI.filled_OR_not) //default is not filled
+		LineGfxInfo.isFilled = true;
+	else
+		LineGfxInfo.isFilled = false;
 	//get drawing, filling colors and pen width from the interface
 	LineGfxInfo.DrawClr = pOut->getCrntDrawColor();
 	LineGfxInfo.FillClr = pOut->getCrntFillColor();

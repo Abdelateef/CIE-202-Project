@@ -29,7 +29,10 @@ void AddTriaAction::ReadActionParameters()
 	//Read 3rd corner and store in point P3
 	pIn->GetPointClicked(P3.x, P3.y);
 
-	TriaGfxInfo.isFilled = false;	//default is not filled
+	if (UI.filled_OR_not) //default is not filled
+		TriaGfxInfo.isFilled = true;
+	else
+		TriaGfxInfo.isFilled = false;
 	//get drawing, filling colors and pen width from the interface
 	TriaGfxInfo.DrawClr = pOut->getCrntDrawColor();
 	TriaGfxInfo.FillClr = pOut->getCrntFillColor();

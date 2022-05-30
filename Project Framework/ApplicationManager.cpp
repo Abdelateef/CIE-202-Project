@@ -6,10 +6,14 @@
 #include"Actions\SelectAction.h"
 #include "Actions\DeletAction.h"
 #include "Actions\ChangeCurrentColors.h"
+<<<<<<< Updated upstream
 #include"Actions/CopyAction.h"
 #include"Actions/PasteAction.h"
 #include"Actions/CutAction.h"
 
+=======
+#include "Actions\ChangeFigureColors.h"
+>>>>>>> Stashed changes
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -74,6 +78,18 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		UI.InterfaceMode = MODE_DRAW_COLOR;
 		pAct = new ChangeCurrentColors(this);
 		break;
+	case CHNG_FILL_CLR:
+		if (SelectedFig.size() != 0)
+		{
+			pAct = new ChangeFigureColors(this, MODE_FILL_COLOR);
+			break;
+		}
+		else
+		{
+			pOut->CreateColorToolBar(0);
+			pAct = new ChangeCurrentColors(this);
+			break;
+		}
 	case EXIT:
 		///create ExitAction here
 
@@ -163,9 +179,26 @@ void ApplicationManager::MakeFigNull(CFigure* fig) {
 
 }
  
-
-
-
+int ApplicationManager::GetNUmOfSelectedFig()const
+{
+	return SelectedFig.size();
+}
+/////////////////////////////////////////////
+CFigure* ApplicationManager::GetSelectedFigure(int i)const
+{
+	return SelectedFig[i];
+}
+void ApplicationManager::CansSelectedFigure(CFigure* Figure)
+{
+	for (int i = 0; i < SelectedFig.size(); i++)
+	{
+		if (SelectedFig[i] == Figure)
+		{
+			SelectedFig.erase(SelectedFig.begin() + i);
+			break;
+		}
+	}
+}
 //Destructor
 ApplicationManager::~ApplicationManager()
 {

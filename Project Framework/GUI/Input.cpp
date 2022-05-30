@@ -62,6 +62,7 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 			case ITM_REDO:return REDO;
 			case ITM_UNDO:return UNDO;
 			case ITM_COLOR:return CHNG_DRAW_CLR;
+			case FILL_CLR: return CHNG_FILL_CLR;
 			case ITM_EXIT: return EXIT;
 
 
@@ -82,6 +83,28 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 		return STATUS;
 	}
 	else if (UI.InterfaceMode == MODE_DRAW_COLOR){
+		if (y >= 0 && y < UI.ToolBarHeight)
+		{
+			//Check which Menu item was clicked
+			//==> This assumes that menu items are lined up horizontally <==
+			int ClickedItemOrder = (x / UI.MenuItemWidth);
+			//Divide x coord of the point clicked by the menu item width (int division)
+			//if division result is 0 ==> first item is clicked, if 1 ==> 2nd item and so on
+
+			switch (ClickedItemOrder)
+			{
+			case ITM_BLACK: return SET_BLACK;
+			case ITM_WHITE: return SET_WHITE;
+			case ITM_RED: return SET_RED;
+			case ITM_GREEN: return SET_GREEN;
+			case ITM_BLUE:return SET_BLUE;
+			case ITM_BACK:return BACK;
+
+			default: return EMPTY;	//A click on empty place in desgin toolbar
+			}
+		}
+	}
+	else if (UI.InterfaceMode == MODE_FILL_COLOR) {
 		if (y >= 0 && y < UI.ToolBarHeight)
 		{
 			//Check which Menu item was clicked
