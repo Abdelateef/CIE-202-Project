@@ -1,12 +1,5 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-<<<<<<< Updated upstream
-  PasteAction.cpp
-  PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe
-=======
-  AddTriaAction.cpp
-  AddRectAction.cpp
-  AddLineAction.cpp
-  AddCircAction.cpp
-  Generating Code...
+  ApplicationManager.cpp
+C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\ApplicationManager.cpp(189,20): warning C4018: '<': signed/unsigned mismatch
+AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> C:\Users\pc\Documents\GitHub\CIE-202-Project\Project Framework\Debug\PT Project.exe
->>>>>>> Stashed changes

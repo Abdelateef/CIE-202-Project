@@ -6,14 +6,10 @@
 #include"Actions\SelectAction.h"
 #include "Actions\DeletAction.h"
 #include "Actions\ChangeCurrentColors.h"
-<<<<<<< Updated upstream
 #include"Actions/CopyAction.h"
 #include"Actions/PasteAction.h"
 #include"Actions/CutAction.h"
-
-=======
 #include "Actions\ChangeFigureColors.h"
->>>>>>> Stashed changes
 //Constructor
 ApplicationManager::ApplicationManager()
 {
