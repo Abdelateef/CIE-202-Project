@@ -3,10 +3,17 @@
 #include "..\ApplicationManager.h"
 #include "..\GUI\input.h"
 #include "..\GUI\Output.h"
+#include"..\Figures\CCircle.h"
 
 CopyAction::CopyAction(ApplicationManager* pApp) :Action(pApp)
 {
 
+}
+
+template<typename Base, typename T>
+inline bool instanceof(const T* ptr)
+{
+	return dynamic_cast<const Base*>(ptr) != nullptr;
 }
 
 CopyAction::~CopyAction(void)
@@ -25,23 +32,27 @@ void CopyAction::ReadActionParameters() {
 	if (pManager->GetFigurecount() == 0 ) {
 		pOut->PrintMessage("No Figure to Copy!");
 	}
-	else {
-
 		CFigure* FigureList[200];
 		pManager->GetFigureList(FigureList);
 		for (int i = 0; i < 200; i++) {
 			if (FigureList[i] == nullptr) {
 				break;
 			}
+			bool found = 0;
 			if (FigureList[i]->IsSelected()) {
 				pManager->Copied_FigureList[i] = FigureList[i];
+				found = 1;
+			}
+			else {
+				if (found == 0) {
+					pOut->PrintMessage("No Figure Selected!");
+				}
 			}
 		}
 		for (int i = 0 ; i <200 ; i++){
 			if (pManager->Copied_FigureList[i] != NULL) {
-				pOut->PrintMessage("There is some figure copied");
+				pOut->PrintMessage("Copy Action : Figure has been copied");
 			}
-	}
 	}
 }
 

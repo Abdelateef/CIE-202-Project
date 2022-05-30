@@ -26,8 +26,8 @@ void PasteAction::ReadActionParameters() {
 	CFigure* FigureList[200];
 	pManager->GetFigureList(FigureList);
 
-	if (pManager->GetFigurecount() == 0) {
-		pOut->PrintMessage("No Figure to Copy!");
+	if (pManager->GetFigurecount() == 0 && pManager->Copied_FigureList[0]==NULL) {
+		pOut->PrintMessage("No Figure to paste!");
 	}
 	else {
 		pOut->PrintMessage("Paste Figure : Clink a point click");

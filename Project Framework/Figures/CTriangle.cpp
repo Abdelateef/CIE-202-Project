@@ -59,7 +59,6 @@ CFigure* CTriangle::Clone(Point click) {
 	NewCorner2.x = NewCorner1.x - (pointxdistancecorner2);
 	NewCorner2.y = NewCorner1.y - (pointydistancecorner2);
 
-
 	int pointxdistancecorner3, pointydistancecorner3;
 	pointxdistancecorner3 = (Corner1.x - Corner3.x);
 	pointydistancecorner3 = (Corner1.y - Corner3.y);

@@ -14,7 +14,6 @@ public:
 	bool isWithinMe(Point click);
 	virtual void Drawpastfigures(Output* pOut,Point Click) const ;
 	virtual CFigure* Clone(Point click) ;
-
 };
 
 #endif

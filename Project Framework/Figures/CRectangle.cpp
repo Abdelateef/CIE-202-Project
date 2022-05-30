@@ -31,17 +31,16 @@ bool CRectangle::isWithinMe(Point click) {
 	return false;
 }
 
-
 void CRectangle::Drawpastfigures(Output* pOut,Point Click) const {
 	Point NewCorner1, NewCorner2;
-	int rectangle_Width = abs(Corner1.x - Corner2.x);
-	int retangle_Higth = abs(Corner1.y - Corner1.y);
-	NewCorner1.x = Click.x - (rectangle_Width / 2);
-	NewCorner1.y = Click.y - (retangle_Higth / 2);
-	NewCorner2.x = Click.x + (rectangle_Width / 2);
-	NewCorner2.y = Click.y + (retangle_Higth / 2);
+	int rectangle_Width = (Corner1.x - Corner2.x);
+	int retangle_Higth = (Corner1.y - Corner1.y);
+	NewCorner1.x = Click.x - ((Corner1.x - Corner2.x) / 2);
+	NewCorner1.y = Click.y - ((Corner1.y - Corner1.y) / 2);
+	NewCorner2.x = Click.x + ((Corner1.x - Corner2.x) / 2);
+	NewCorner2.y = Click.y + ((Corner1.y - Corner1.y) / 2);
 
-	pOut->DrawRect(NewCorner1, NewCorner2, FigGfxInfo, Selected);
+	pOut->DrawRect(NewCorner1, NewCorner2, FigGfxInfo, Selected == false);
 }
 
 CFigure* CRectangle::Clone(Point click) {

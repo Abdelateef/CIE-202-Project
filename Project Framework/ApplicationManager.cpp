@@ -195,6 +195,8 @@ void ApplicationManager::CansSelectedFigure(CFigure* Figure)
 		}
 	}
 }
+
+
 //Destructor
 ApplicationManager::~ApplicationManager()
 {

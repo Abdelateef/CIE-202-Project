@@ -18,17 +18,16 @@ private:
 	vector <CFigure*> SelectedFig; //Pointer to the selected figure
 	Input *pIn;
 	Output *pOut;
-
+	CFigure* application_clipboard[200];
 
 public:	
-
-	CFigure* Copied_FigureList[200];
 
 	ApplicationManager(); 
 	~ApplicationManager();
 	
 	// -- Action-Related Functions
 	//Reads the input command from the user and returns the corresponding action type
+	CFigure* Copied_FigureList[200]; // copiedlist;
 	ActionType GetUserAction() const;
 	void ExecuteAction(ActionType) ; //Creates an action and executes it
 	void CansSelectedFigure(CFigure*);
@@ -47,6 +46,7 @@ public:
 	void MakeFigNull(CFigure* fig);
 	int GetNUmOfSelectedFig()const; 
 	void UpdateInterface() const;	//Redraws all the drawing window	
+
 };
 
 #endif
