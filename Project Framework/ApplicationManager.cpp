@@ -80,6 +80,15 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case TO_DRAW:
 		pOut->CreateDrawToolBar();
 		break;
+	case HIDE_UNFILL_SHAPE:
+		pOut->CreateUnfilledselected_shape();
+		break;
+	case HIDE_SMAE_COLOR:
+		pOut->Createsamecoloredselected_shape();
+		break;
+	case HIDE_FILL_SHAPE:
+		pOut->Createfilledselected_shape();
+		break;
 	case CHNG_FILL_CLR:
 		if (SelectedFig.size() != 0)
 		{

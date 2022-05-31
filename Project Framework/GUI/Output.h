@@ -35,7 +35,11 @@ public:
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
 	void ChangeDrawColor(ActionType); //change draw color 
-	void ChangeFillColor(ActionType); // change fill color 
+	void ChangeFillColor(ActionType); // change fill color
+	void CreateUnfilledselected_shape() const;	//creates Play mode toolbar & menu
+	void Createfilledselected_shape() const;
+	void Createsamecoloredselected_shape() const;
+
 	~Output();
 };
 

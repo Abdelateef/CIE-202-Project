@@ -1,29 +1,4 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  main.cpp
-  Output.cpp
   Input.cpp
-  CTriangle.cpp
-  CRectangle.cpp
-  CLine.cpp
-  CFigure.cpp
-  CCircle.cpp
-  ApplicationManager.cpp
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(196,20): warning C4018: '<': signed/unsigned mismatch
-  SelectAction.cpp
-  PasteAction.cpp
-  DeletAction.cpp
-  CutAction.cpp
-  CopyAction.cpp
-  ChangeFigureColors.cpp
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(61,21): warning C4018: '<': signed/unsigned mismatch
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(65,21): warning C4018: '<': signed/unsigned mismatch
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(70,21): warning C4018: '<': signed/unsigned mismatch
-  ChangeCurrentColors.cpp
-  AddTriaAction.cpp
-  AddRectAction.cpp
-  AddLineAction.cpp
-  AddCircAction.cpp
-  Generating Code...
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(165): warning C4715: 'Input::GetUserAction': not all control paths return a value
-AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(234): warning C4715: 'Input::GetUserAction': not all control paths return a value
   PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe

@@ -12,7 +12,10 @@ enum GUI_MODE	//Graphical user interface mode
 	MODE_DRAW,	//Drawing mode (startup mode)
 	MODE_PLAY,	//Playing mode
 	MODE_DRAW_COLOR, // Draw color mode 
-	MODE_FILL_COLOR // Fill color mode
+	MODE_FILL_COLOR, // Fill color mode
+	MODE_UNFILL_SHAPES, // Play unfill shape play Mode
+	MODE_SMAME_COLOR_SHAPES, // Play same color play Mode
+	MODE_FILL_SHAPES        // Play fill shape play Mode
 };
 
 enum DrawMenuItem //The items of the Draw menu (you should add more items)
@@ -48,6 +51,34 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 	PLAY_ITM_COUNT
 
 };
+
+enum Unfill_shap {
+	ITM_LINEE,
+	ITM_SQUAREE,
+	ITM_CIRCLEE,
+	ITM_TRIANGLEE,
+	ITM_BACKK,
+
+	UNFILL_ITM_COUNT
+};
+
+
+enum fill_shap {
+	ITM_LINEEE,
+	ITM_SQUAREEE,
+	ITM_CIRCLEEE,
+	ITM_TRIANGLEEE,
+	ITM_BLACKK,
+	ITM_WHITEE,
+	ITM_REDD,
+	ITM_GREENN,
+	ITM_BLUEE,
+	ITM_BACKKK,
+
+	FILL_ITM_COUNT
+};
+
+
 
 enum SetColor
 {
