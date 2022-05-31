@@ -103,13 +103,11 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_COPY] = "images\\MenuItems\\Menu_Copy.jpg";
 	MenuItemImages[ITM_CUT] = "images\\MenuItems\\Menu_Cut.jpg";
 	MenuItemImages[ITM_PASTE] = "images\\MenuItems\\Menu_Paste.jpg";
-	MenuItemImages[ITM_REDO] = "images\\MenuItems\\Menu_Redo.jpg";
-	MenuItemImages[ITM_UNDO] = "images\\MenuItems\\Menu_Undo.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
 	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\Menu_Color.jpg";
 	MenuItemImages[FILL_CLR] = "images\\MenuItems\\Menu_fillc.jpg";
-
-
+	MenuItemImages[SWITCH_PLAY] = "images\\MenuItems\\Menu_Play_Mode.jpg";
+	
 	//TODO: Prepare images for each menu item and add it to the list
 
 	//Draw menu item one image at a time
@@ -171,7 +169,26 @@ void Output::CreateColorToolBar(int a) const
 void Output::CreatePlayToolBar() const
 {
 	UI.InterfaceMode = MODE_PLAY;
-	///TODO: write code to create Play mode menu
+	ClearToolBar();
+
+
+
+	string MenuItemImages[PLAY_ITM_COUNT];
+	MenuItemImages[SWITCH_DRAW] = "images\\MenuItems\\Menu_Draw_Mode.jpg";
+
+	//Draw menu item one image at a time
+	for (int i = 0; i < PLAY_ITM_COUNT; i++)
+		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth, UI.ToolBarHeight);
+
+
+
+
+
+
+
+	//Draw a line under the toolbar
+	pWind->SetPen(RED, 3);
+	pWind->DrawLine(0, UI.ToolBarHeight, UI.width, UI.ToolBarHeight);
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 

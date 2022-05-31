@@ -74,6 +74,12 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		UI.InterfaceMode = MODE_DRAW_COLOR;
 		pAct = new ChangeCurrentColors(this);
 		break;
+	case TO_PLAY:
+		pOut->CreatePlayToolBar();
+		break;
+	case TO_DRAW:
+		pOut->CreateDrawToolBar();
+		break;
 	case CHNG_FILL_CLR:
 		if (SelectedFig.size() != 0)
 		{
@@ -86,6 +92,7 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new ChangeCurrentColors(this);
 			break;
 		}
+
 	case EXIT:
 		///create ExitAction here
 
