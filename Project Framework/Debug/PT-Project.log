@@ -24,5 +24,6 @@ F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project
   AddLineAction.cpp
   AddCircAction.cpp
   Generating Code...
-F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(161): warning C4715: 'Input::GetUserAction': not all control paths return a value
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(165): warning C4715: 'Input::GetUserAction': not all control paths return a value
+AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe

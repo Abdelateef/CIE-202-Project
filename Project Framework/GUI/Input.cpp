@@ -140,7 +140,11 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 				switch (ClickedItemOrder)
 				{
 				case SWITCH_DRAW: return TO_DRAW;
-
+				case UNFILL_SHAPES_MODE:return HIDE_UNFILL_SHAPE;
+				case COLOR_SHAPES_MODE: return HIDE_SMAE_COLOR;
+				case FILL_SHAPES_MODE: return HIDE_FILL_SHAPE;
+				case START : return START_GAME;
+				case RESTART : return RESTART_GAME;
 
 				default: return EMPTY;
 				}

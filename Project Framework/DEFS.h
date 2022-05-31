@@ -44,6 +44,13 @@ enum ActionType //The actions supported (you can add more if needed)
 	SET_GREEN,       //Set the Green color 
 	SET_BLUE,        // Set the Blue color 
 	BACK,            // Back to the tool bar 
+
+	/////////////// PLAY MODE Actions
+	HIDE_UNFILL_SHAPE,
+	HIDE_SMAE_COLOR,
+	HIDE_FILL_SHAPE,
+	START_GAME,
+	RESTART_GAME,
 };
 
 struct Point	//To be used for figures points

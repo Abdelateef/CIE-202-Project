@@ -39,9 +39,11 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 enum PlayMenuItem //The items of the Play menu (you should add more items)
 {
 	SWITCH_DRAW,
-
-
-
+	UNFILL_SHAPES_MODE,
+	COLOR_SHAPES_MODE,
+	FILL_SHAPES_MODE,
+	START,
+	RESTART,
 
 	PLAY_ITM_COUNT
 
