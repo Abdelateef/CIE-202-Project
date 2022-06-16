@@ -19,13 +19,14 @@ public:
 	void SetSelected(bool s);	//select/unselect the figure
 	int counter();
 	bool IsSelected() const;	//check whether fig is selected
-
+	virtual int area() = 0;
+	virtual int radius() = 0;
 	virtual void Draw(Output* pOut) const  = 0 ;		//Draw the figure
 	virtual void Drawpastfigures(Output* pOut,Point Click) const = 0;
 	void ChngDrawClr(color Dclr);	//changes the figure's drawing color
 	void ChngFillClr(color Fclr);	//changes the figure's filling color
 
-	void setcount();
+	
 
 	int objcountreturn();
 

@@ -69,3 +69,13 @@ CFigure* CTriangle::Clone(Point click) {
 	CFigure* Temp = new CTriangle(NewCorner1, NewCorner2, NewCorner3, FigGfxInfo);
 	return Temp;
 }
+int CTriangle::area()
+{
+	int area = abs(0.5 * ((Corner1.x * (Corner2.y - Corner3.y)) + (Corner2.x * (Corner3.y - Corner1.y)) + (Corner3.x * (Corner1.y - Corner2.y))));
+	return area;
+}
+int CTriangle::radius()
+{
+	int x = abs(Corner2.x - Corner1.x);
+	return x;
+}

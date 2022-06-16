@@ -46,6 +46,18 @@ void CLine::Drawpastfigures(Output* pOut,Point Click) const {
 	pOut->DrawLine(NewCorner1, NewCorner2, FigGfxInfo, Selected==false);
 }
 
+int CLine::area()
+{
+	int x = abs(Corner2.x - Corner1.x);
+
+	return x;
+}
+
+int CLine::radius()
+{
+	int x = abs(Corner2.x - Corner1.x);
+	return x;
+}
 
 CFigure* CLine::Clone(Point click) {
 	

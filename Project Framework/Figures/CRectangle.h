@@ -13,6 +13,8 @@ public:
 	virtual void Draw(Output* pOut) const;
 	bool isWithinMe(Point click);
 	virtual void Drawpastfigures(Output* pOut,Point Click) const ;
+	int area();
+	int radius();
 	virtual CFigure* Clone(Point click) ;
 };
 

@@ -43,6 +43,21 @@ void CRectangle::Drawpastfigures(Output* pOut,Point Click) const {
 	pOut->DrawRect(NewCorner1, NewCorner2, FigGfxInfo, Selected == false);
 }
 
+int CRectangle::area()
+{
+	int x = abs(Corner1.x - Corner2.x);
+	int y = abs(Corner1.y - Corner2.y);
+	int area;
+	area = x * y;
+	return area;
+}
+
+int CRectangle::radius()
+{
+	int x = abs(Corner2.x - Corner1.x);
+	return x;
+}
+
 CFigure* CRectangle::Clone(Point click) {
 	Point NewCorner1, NewCorner2;
 	int rectangle_Width = abs(Corner1.x - Corner2.x);

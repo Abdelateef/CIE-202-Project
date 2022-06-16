@@ -37,6 +37,19 @@ void CCircle::Drawpastfigures(Output* pOut,Point Click) const {
 	pOut->DrawCirc(Click, Corner2New, FigGfxInfo, Selected==false);
 }
 
+int CCircle::area()
+{
+	int x = abs(Corner2.x - Corner1.x);
+	int area;
+	area = 3.14 * x * x;
+	return area;
+}
+
+int CCircle::radius()
+{
+	int x = abs(Corner2.x - Corner1.x);
+	return x;
+}
 
 CFigure* CCircle::Clone(Point click) {
 	Point Corner2New;
