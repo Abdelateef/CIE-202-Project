@@ -94,7 +94,7 @@ void Output::CreateDrawToolBar() const
 	//To control the order of these images in the menu, 
 	//reoder them in UI_Info.h ==> enum DrawMenuItem
 	string MenuItemImages[DRAW_ITM_COUNT];
-	MenuItemImages[ITM_LINE] = "images\\MenuItems\\Menu_Line.jpg";
+	MenuItemImages[ITM_LINE] =  "images\\MenuItems\\Menu_Line.jpg";
 	MenuItemImages[ITM_RECT] = "images\\MenuItems\\Menu_Rect.jpg";
 	MenuItemImages[ITM_CIRC] = "images\\MenuItems\\Menu_Circ.jpg";
 	MenuItemImages[ITM_TRIA] = "images\\MenuItems\\Menu_Tria.jpg";
@@ -107,9 +107,13 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\Menu_Color.jpg";
 	MenuItemImages[FILL_CLR] = "images\\MenuItems\\Menu_fillc.jpg";
 	MenuItemImages[SWITCH_PLAY] = "images\\MenuItems\\Menu_Play_Mode.jpg";
+<<<<<<< Updated upstream
 	MenuItemImages[ITM_SAVE] = "images\\MenuItems\\save-icon-file-save-icon-disc-icon-save-icon-file-save-icon-disc-icon-vector-icon-124470168.jpg";
 	MenuItemImages[ITM_Load] = "images\\MenuItems\\images (1).jpg";
 	
+=======
+	MenuItemImages[ITM_SIZE] = "images\\MenuItems\\size.jpg";
+>>>>>>> Stashed changes
 	//TODO: Prepare images for each menu item and add it to the list
 
 	//Draw menu item one image at a time
@@ -261,6 +265,26 @@ void Output::CreateUnfilledselected_shape() const
 	pWind->DrawLine(0, UI.ToolBarHeight, UI.width, UI.ToolBarHeight);
 
 }
+//////////////////////////////////////////////////////////////////////////////////////////
+void Output::CreateSizeToolBar() const
+{
+	UI.InterfaceMode = MODE_SIZE;
+	ClearToolBar();
+	///TODO: write code to create Play mode menu
+	string MenuItemImages[SIZE_ITM_COUNT];
+	MenuItemImages[ITM_TINY] = "images\\MenuItems\\tiny.jpg";
+	MenuItemImages[ITM_NORMAL] = "images\\MenuItems\\normal.jpg";
+	MenuItemImages[ITM_LARGE] = "images\\MenuItems\\InkedCopy.jpg";
+	MenuItemImages[ITM_BACKKKK] = "images\\MenuItems\\back.jpg";
+
+	//TODO: Prepare images for each menu item and add it to the list
+
+	//Draw menu item one image at a time
+	for (int i = 0; i < SIZE_ITM_COUNT; i++)
+		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth, UI.ToolBarHeight);
+	//Draw a line under the toolbar
+}
+//////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////
 void Output::Createsamecoloredselected_shape() const
@@ -468,6 +492,7 @@ void Output::ChangeDrawColor(ActionType ActType2)
 
 	}
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////
 void Output::ChangeFillColor(ActionType ActType3)
 {
