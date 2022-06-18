@@ -32,6 +32,8 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_COPY,		// Copy item in Menu
 	ITM_CUT,		// Cut item in Menu 
 	ITM_PASTE,		// Paste item in Menu
+	ITM_SAVE,       // Save item in menu
+	ITM_Load,       // load item in menu
 	ITM_EXIT,		//Exit item
 	ITM_COLOR,      // color item
 	FILL_CLR,       // fill item 
@@ -47,7 +49,7 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 	FILL_SHAPES_MODE,
 	START,
 	RESTART,
-
+	
 	PLAY_ITM_COUNT
 
 };

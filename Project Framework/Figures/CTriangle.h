@@ -14,4 +14,9 @@ public:
 	virtual CFigure* Clone(Point click);
 	int area();
 	int radius();
+	int x1();
+	int x2();
+	int y1();
+	int y2();
+	void drawloadaction(Output* pOut,int arr[]);
 };

@@ -60,9 +60,12 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 			case ITM_COPY: return COPY;
 			case ITM_CUT: return CUT;
 			case ITM_PASTE: return PASTE;
+			case ITM_SAVE: return SAVE;
+			case ITM_Load: return LOAD;
+			case ITM_EXIT: return EXIT;
 			case ITM_COLOR:return CHNG_DRAW_CLR;
 			case FILL_CLR: return CHNG_FILL_CLR;
-			case ITM_EXIT: return EXIT;
+			
 		
 
 

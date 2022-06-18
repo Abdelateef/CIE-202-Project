@@ -25,8 +25,11 @@ public:
 	virtual void Drawpastfigures(Output* pOut,Point Click) const = 0;
 	void ChngDrawClr(color Dclr);	//changes the figure's drawing color
 	void ChngFillClr(color Fclr);	//changes the figure's filling color
-
-	
+	virtual int x1() = 0;
+	virtual int x2() = 0;
+	virtual int y1() = 0;
+	virtual int y2() = 0;
+	virtual void drawloadaction(Output* pOut,int arr[]) = 0;
 
 	int objcountreturn();
 

@@ -1,7 +1,3 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  CTriangle.cpp
-D:\github c++\CIE-202-Project\Project Framework\Figures\CTriangle.cpp(74,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  SelectAction.cpp
-  AddTriaAction.cpp
-  Generating Code...
+  Save.cpp
   PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe

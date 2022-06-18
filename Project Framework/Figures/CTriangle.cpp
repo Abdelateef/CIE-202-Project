@@ -79,3 +79,30 @@ int CTriangle::radius()
 	int x = abs(Corner2.x - Corner1.x);
 	return x;
 }
+
+int CTriangle::x1()
+{
+	return 0;
+}
+
+int CTriangle::x2()
+{
+	return 0;
+}
+
+int CTriangle::y1()
+{
+	return 0;
+}
+
+int CTriangle::y2()
+{
+	return 0;
+}
+
+void CTriangle::drawloadaction(Output* pOut,int arr[])
+{
+}
+
+
+

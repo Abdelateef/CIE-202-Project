@@ -1,4 +1,6 @@
 #include "CCircle.h"
+#include "..\ApplicationManager.h"
+#include "..\Actions\Action.h"
 
 CCircle::CCircle(Point P1, Point P2, GfxInfo FigureGfxInfo):CFigure(FigureGfxInfo)
 {
@@ -58,3 +60,35 @@ CFigure* CCircle::Clone(Point click) {
 	CFigure* Temp = new CCircle(click, Corner2New, FigGfxInfo);
 	return Temp;
 }
+
+int CCircle::x1()
+{
+	return Corner1.x;
+}
+
+int CCircle::x2()
+{
+	return Corner2.x;
+}
+
+int CCircle::y1()
+{
+	return Corner1.y;
+}
+
+int CCircle::y2()
+{
+	return Corner2.y;
+}
+
+void CCircle::drawloadaction(Output* pOut,int arr[])
+{
+	Point ncorner1, ncorner2;
+	ncorner1.x = arr[0];
+	ncorner2.x = arr[1];
+	ncorner1.y = arr[2];
+	ncorner2.y = arr[3];
+	pOut->DrawCirc(ncorner1, ncorner2, FigGfxInfo, Selected == false);
+}
+
+

@@ -69,3 +69,28 @@ CFigure* CRectangle::Clone(Point click) {
 	CFigure* Temp = new CRectangle(NewCorner1, NewCorner2, FigGfxInfo);
 	return Temp;
 }
+
+int CRectangle::x1()
+{
+	return 0;
+}
+
+int CRectangle::x2()
+{
+	return 0;
+}
+
+int CRectangle::y1()
+{
+	return 0;
+}
+
+int CRectangle::y2()
+{
+	return 0;
+}
+
+void CRectangle::drawloadaction(Output* pOut,int arr[])
+{
+}
+

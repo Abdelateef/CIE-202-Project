@@ -10,6 +10,8 @@
 #include"Actions/PasteAction.h"
 #include"Actions/CutAction.h"
 #include "Actions\ChangeFigureColors.h"
+#include "Actions/Save.h"
+#include "Actions/Load.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -69,6 +71,12 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case PASTE:
 		pAct = new PasteAction(this);
+		break;
+	case SAVE:
+		pAct = new Save(this);
+		break;
+	case LOAD:
+		pAct = new Load(this);
 		break;
 	case CHNG_DRAW_CLR:
 		UI.InterfaceMode = MODE_DRAW_COLOR;

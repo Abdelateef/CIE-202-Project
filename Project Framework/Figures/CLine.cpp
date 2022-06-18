@@ -76,3 +76,28 @@ CFigure* CLine::Clone(Point click) {
 	CFigure* Temp = new CLine(NewCorner1, NewCorner2, FigGfxInfo);
 	return Temp;
 }
+
+int CLine::x1()
+{
+	return 0;
+}
+
+int CLine::x2()
+{
+	return 0;
+}
+
+int CLine::y1()
+{
+	return 0;
+}
+
+int CLine::y2()
+{
+	return 0;
+}
+
+void CLine::drawloadaction(Output* pOut,int arr[])
+{
+}
+
