@@ -65,12 +65,7 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 			case ITM_EXIT: return EXIT;
 			case ITM_COLOR:return CHNG_DRAW_CLR;
 			case FILL_CLR: return CHNG_FILL_CLR;
-<<<<<<< Updated upstream
-			
-=======
-			case ITM_EXIT: return EXIT;
 			case ITM_SIZE: return Wid_SIZE;
->>>>>>> Stashed changes
 		
 
 

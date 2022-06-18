@@ -73,13 +73,11 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case PASTE:
 		pAct = new PasteAction(this);
 		break;
-<<<<<<< Updated upstream
 	case SAVE:
 		pAct = new Save(this);
 		break;
 	case LOAD:
 		pAct = new Load(this);
-=======
 	case Wid_SIZE:
 		UI.InterfaceMode = MODE_SIZE;
 		pOut->CreateSizeToolBar();
@@ -98,7 +96,6 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	case SET_Large:
 		UI.PenWidth = 9;
 		pOut->CreateDrawToolBar();
->>>>>>> Stashed changes
 		break;
 	case CHNG_DRAW_CLR:
 		UI.InterfaceMode = MODE_DRAW_COLOR;
