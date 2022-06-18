@@ -27,8 +27,8 @@ inline bool instanceof(const T* ptr)
 void Load::ReadActionParameters() 
 {
 	
-	CFigure* mylist=nullptr;
-	int x, arr[4], i=0;
+	CFigure* mylist = nullptr;
+	int x, arr[4], i = 0;
 	/*pManager->GetFigureList(mylist);*/
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
@@ -39,12 +39,20 @@ void Load::ReadActionParameters()
 	{
 		pOut->PrintMessage("unable to open file");
 	}
-	while (infile>>x)
+	while (infile >> x)
 	{
 		arr[i] = x;
 		i++;
 	}
-	mylist->drawloadaction(pOut,arr);
+	Point Corner1, Corner2;
+	Corner1.x = arr[0];
+	Corner1.y = arr[2];
+	Corner2.x = arr[1];
+	Corner2.y = arr[3];
+	GfxInfo circle;
+	CCircle* test = new CCircle(Corner1, Corner2, circle);
+	pManager->AddFigure(test);
+	pOut->DrawCirc(Corner1, Corner2, circle);
 	infile.close();
 }
 

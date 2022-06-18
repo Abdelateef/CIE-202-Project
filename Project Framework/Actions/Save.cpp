@@ -34,10 +34,10 @@ void Save::Execute()
 	file.open("file1");
 	for (int i = 0; i < 1; i++)
 	{
-		file << mylist[i]->x1();
-		file << mylist[i]->x2();
-		file << mylist[i]->y1();
-		file << mylist[i]->y2();
+		file << mylist[i]->x1()<<endl;
+		file << mylist[i]->x2()<<endl;
+		file << mylist[i]->y1() << endl;
+		file << mylist[i]->y2()<<endl;
 	}
 	file.close();
 }
