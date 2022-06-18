@@ -36,6 +36,7 @@ enum ActionType //The actions supported (you can add more if needed)
 	UNDO,			//Undo the actions
 	REDO,			//Redo the actions
 	SELECT,			//Select action
+	Wid_SIZE,       //Change width size
 	EXIT,			//Exit the application
 
 
@@ -45,7 +46,11 @@ enum ActionType //The actions supported (you can add more if needed)
 
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY,		//Switch interface to Play mode
-
+	///////////////////////////////////////////////
+	SET_tiny,      //Set the tiny width 
+	SET_Normal,    //Set the normal width 
+	SET_Large,     // Set the large width
+	SET_BACK,
 	///TODO: Add more action types (if needed)
 	SET_BLACK,        //Set the Black color 
 	SET_WHITE,        //Set the White color 

@@ -14,6 +14,7 @@ public:
 	void CreatePlayToolBar() const;	//creates Play mode toolbar & menu
 	void CreateStatusBar() const;	//create the status bar
 	void CreateColorToolBar() const; //Creat color tool Bar 
+	void CreateSizeToolBar() const; //Create size tool bar
 
 	void CreateColorToolBar(int) const; //Creat color tool bar 
 	Input* CreateInput() const; //creates a pointer to the Input object	
@@ -35,7 +36,8 @@ public:
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
 	void ChangeDrawColor(ActionType); //change draw color 
-	void ChangeFillColor(ActionType); // change fill color
+	void ChangeFillColor(ActionType); //change fill color
+	void ChangeSize(ActionType);      //change the size 
 	void CreateUnfilledselected_shape() const;	//creates Play mode toolbar & menu
 	void Createfilledselected_shape() const;
 	void Createsamecoloredselected_shape() const;

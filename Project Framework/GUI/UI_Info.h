@@ -15,7 +15,8 @@ enum GUI_MODE	//Graphical user interface mode
 	MODE_FILL_COLOR, // Fill color mode
 	MODE_UNFILL_SHAPES, // Play unfill shape play Mode
 	MODE_SMAME_COLOR_SHAPES, // Play same color play Mode
-	MODE_FILL_SHAPES        // Play fill shape play Mode
+	MODE_FILL_SHAPES,       // Play fill shape play Mode
+	MODE_SIZE              //Change the size 
 };
 
 enum DrawMenuItem //The items of the Draw menu (you should add more items)
@@ -37,8 +38,10 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_EXIT,		//Exit item
 	ITM_COLOR,      // color item
 	FILL_CLR,       // fill item 
+	ITM_SIZE,       // change width size
 	DRAW_ITM_COUNT	//no. of menu items ==> This should be the last line in this enum
 			//Switch to play mode	
+
 };
 
 enum PlayMenuItem //The items of the Play menu (you should add more items)
@@ -81,7 +84,14 @@ enum fill_shap {
 };
 
 
-
+enum SetSize
+{
+	ITM_TINY,
+	ITM_NORMAL,
+	ITM_LARGE,
+	ITM_BACKKKK,
+	SIZE_ITM_COUNT
+};
 enum SetColor
 {
 	ITM_BLACK,
