@@ -94,3 +94,7 @@ void CRectangle::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+
+string CRectangle::GetName() {
+	return "Rectangle";
+}

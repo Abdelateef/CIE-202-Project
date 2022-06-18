@@ -101,3 +101,6 @@ void CLine::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+string CLine::GetName() {
+	return "Line";
+}

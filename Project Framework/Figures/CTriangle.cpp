@@ -104,5 +104,10 @@ void CTriangle::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+string CTriangle::GetName() {
+	return "Triangle";
+}
+
+
 
 

@@ -194,10 +194,10 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 
 				switch (ClickedItemOrder)
 				{
-				case ITM_LINEE: return SET_BLACK;
-				case ITM_SQUAREE: return SET_WHITE;
-				case ITM_CIRCLEE: return SET_RED;
-				case ITM_TRIANGLEE: return SET_GREEN;
+				case ITM_LINEE: return HIDE_LINE;
+				case ITM_SQUAREE: return HIDE_RECT;
+				case ITM_CIRCLEE: return HIDE_CIRC;
+				case ITM_TRIANGLEE: return HIDE_TRI;
 				case ITM_BACKK:return BACK;
 				default: return EMPTY;	//A click on empty place in desgin toolbar
 				}

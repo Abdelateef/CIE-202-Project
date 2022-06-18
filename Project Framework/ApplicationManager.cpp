@@ -12,6 +12,7 @@
 #include "Actions\ChangeFigureColors.h"
 #include "Actions/Save.h"
 #include "Actions/Load.h"
+#include"Actions/PlayActionFigureType.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -89,7 +90,7 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		pOut->CreateDrawToolBar();
 		break;
 	case HIDE_UNFILL_SHAPE:
-		pOut->CreateUnfilledselected_shape();
+		pAct = new PlayActionFigureType(this);
 		break;
 	case HIDE_SMAE_COLOR:
 		pOut->Createsamecoloredselected_shape();
@@ -219,6 +220,22 @@ void ApplicationManager::CansSelectedFigure(CFigure* Figure)
 		}
 	}
 }
+
+
+
+
+
+/////////////////
+int ApplicationManager::GetNumOfFigType(string figtype) {
+	int cnt = 0;
+	for (int i = 0; i < GetFigurecount(); i++) {
+		if (figtype == (FigList[i]->GetName())) {
+			cnt++;
+		}
+	}
+	return cnt;
+}
+
 
 
 //Destructor

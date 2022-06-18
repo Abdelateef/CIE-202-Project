@@ -52,6 +52,9 @@ public:
 
 	virtual bool isWithinMe(Point click) = 0;
 	// Gets graphical info of the figures drawn
+
+	virtual string GetName() = 0;
+	// Gets the figure name
 };
 
 #endif

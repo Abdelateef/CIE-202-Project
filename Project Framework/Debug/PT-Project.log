@@ -1,3 +1,36 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  main.cpp
+  Output.cpp
+  Input.cpp
+  CTriangle.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CTriangle.cpp(74,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  CRectangle.cpp
+  CLine.cpp
+  CFigure.cpp
+  CCircle.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CCircle.cpp(46,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ApplicationManager.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\ApplicationManager.cpp(214,20): warning C4018: '<': signed/unsigned mismatch
+  SelectAction.cpp
   Save.cpp
-  PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe
+  PlayActionFigureType.cpp
+  PasteAction.cpp
+  Load.cpp
+  DeletAction.cpp
+  CutAction.cpp
+  CopyAction.cpp
+  ChangeFigureColors.cpp
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(61,21): warning C4018: '<': signed/unsigned mismatch
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(65,21): warning C4018: '<': signed/unsigned mismatch
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Actions\ChangeFigureColors.cpp(70,21): warning C4018: '<': signed/unsigned mismatch
+  ChangeCurrentColors.cpp
+  AddTriaAction.cpp
+  Generating Code...
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\GUI\Input.cpp(237): warning C4715: 'Input::GetUserAction': not all control paths return a value
+  Compiling...
+  AddRectAction.cpp
+  AddLineAction.cpp
+  AddCircAction.cpp
+  Generating Code...
+AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe

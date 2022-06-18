@@ -46,6 +46,8 @@ public:
 	void MakeFigNull(CFigure* fig);
 	int GetNUmOfSelectedFig()const; 
 	void UpdateInterface() const;	//Redraws all the drawing window	
+		/*A function to get the number of figures specified by type*/
+	int GetNumOfFigType(string figtype);
 
 };
 
