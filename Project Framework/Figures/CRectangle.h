@@ -21,7 +21,7 @@ public:
 	int y1();
 	int y2();
 	void drawloadaction(Output* pOut,int arr[]);
-	virtual string GetName();
+	string GetName();
 };
 
 #endif

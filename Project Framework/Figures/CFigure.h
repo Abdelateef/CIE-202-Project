@@ -31,6 +31,7 @@ public:
 	virtual int y2() = 0;
 	virtual void drawloadaction(Output* pOut,int arr[]) = 0;
 
+
 	int objcountreturn();
 
 	///The following functions should be supported by the figure class

@@ -78,6 +78,7 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case LOAD:
 		pAct = new Load(this);
+		break;
 	case Wid_SIZE:
 		UI.InterfaceMode = MODE_SIZE;
 		pOut->CreateSizeToolBar();
