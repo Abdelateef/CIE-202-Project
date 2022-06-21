@@ -45,9 +45,9 @@ void Load::ReadActionParameters()
 	int* arr = new int[i];
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
-	pOut->PrintMessage("load selected");
+	pOut->PrintMessage("Load selected. Please enter file name to load from");
 	ifstream infile;
-	infile.open("file1");
+	infile.open(pIn->GetSrting(pOut));
 	if (!infile)
 	{
 		pOut->PrintMessage("unable to open file");
@@ -219,7 +219,7 @@ void Load::ReadActionParameters()
 			r = test;
 			color loaddrawcolour = color(r, g, b);
 			GfxInfo circle;
-			if (arr[c9] == 190190190)
+			if (arr[fillcolourtriangle] == 190190190)
 			{
 				circle.isFilled = false;
 				circle.BorderWdth = pOut->getCrntPenWidth();

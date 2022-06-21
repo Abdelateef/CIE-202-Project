@@ -28,7 +28,7 @@ void Save::Execute()
 	int c = 0;
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
-	pOut->PrintMessage("save selected");
+	pOut->PrintMessage("Saved ! please Enter file name to save in");
 	CFigure* mylist[200];
 	pManager->GetFigureList(mylist);
 	for (int i = 0; i < 200; i++)
@@ -40,7 +40,7 @@ void Save::Execute()
 
 	}
 	ofstream file;
-	file.open("file1");
+	file.open(pIn->GetSrting(pOut));
 	for (int i = 0; i < c; i++)
 	{
 		
