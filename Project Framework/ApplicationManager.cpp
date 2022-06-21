@@ -167,8 +167,17 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 
 	case EXIT:
 		///create ExitAction here
-
-		break;
+		pOut->PrintMessage("Program about to exit do you want to save ?  yes/no");
+		if (pIn->GetSrting(pOut)=="yes")
+		{
+			pAct = new Save(this);
+			break;
+		}
+		else
+		{
+			break;
+		}
+		
 
 	case STATUS:	//a click on the status bar ==> no action
 		return;
