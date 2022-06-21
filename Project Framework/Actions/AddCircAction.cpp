@@ -19,7 +19,7 @@ void AddCircAction::ReadActionParameters()
 	bool point1found = false;
 	do{
 		pIn->GetPointClicked(P1.x, P1.y);//Read 1st corner and store in point P1
-		if (P1.y >= UI.ToolBarHeight && P1.y < UI.height - UI.StatusBarHeight) {
+		if (P1.y >= UI.ToolBarHeight ) {
 			pOut->PrintMessage("New Circle: Click at second corner (take care the radius will be the difference in x coordinates of two corners)");
 			point1found = true;
 		}
@@ -31,7 +31,11 @@ void AddCircAction::ReadActionParameters()
 			do
 			{
 				pIn->GetPointClicked(P2.x, P2.y);//Read 1st corner and store in point P1
-				if (P2.y >= UI.ToolBarHeight && P2.y < UI.height - UI.StatusBarHeight) {
+				if (P2.y >= UI.ToolBarHeight &&
+					P2.y < UI.height - UI.StatusBarHeight && P1.y < UI.height - UI.StatusBarHeight 
+						&& abs(P2.x - P1.y) < abs(P1.x- UI.ToolBarHeight))
+				{
+
 					//Read 2nd corner and store in point P2
 					point2found = true;
 					if (UI.filled_OR_not) //default is not filled
@@ -46,7 +50,14 @@ void AddCircAction::ReadActionParameters()
 					pOut->ClearStatusBar();
 				}
 				else {
-					pOut->PrintMessage("point two is out of Drawing area range , please reenter point two");
+					if (abs(P2.x - P1.y) >= abs(P1.x - UI.ToolBarHeight)){
+						pOut->PrintMessage("the radius of circle will be out of Drawing area range , please reenter point two");
+					}
+					else {
+						pOut->PrintMessage("point two is out of Drawing area range , please reenter point two");
+						
+					}
+					
 				}
 
 			} while (point2found == false);

@@ -23,8 +23,6 @@ public:
 	void drawloadaction(Output* pOut,int arr[]);
 	int thirdcornerx();
 	int thirdcornery();
-	
-
 
 	virtual string GetName();
 	virtual color Getcolor();
