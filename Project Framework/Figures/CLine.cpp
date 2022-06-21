@@ -113,7 +113,7 @@ int CLine::thirdcornery()
 
 int CLine::objencoded()
 {
-	return 1;
+	return 2;
 }
 
 string CLine::GetName() {
@@ -128,4 +128,17 @@ color CLine::Getcolor() {
 
 GfxInfo& CLine::GetGfxInfo() {
 	return FigGfxInfo;
+}
+
+int CLine::getdrawcolour()
+{
+	int x = FigGfxInfo.DrawClr.ucRed;
+	int y = FigGfxInfo.DrawClr.ucGreen;
+	int z = FigGfxInfo.DrawClr.ucBlue;
+	int sum = x;
+	sum = sum * 1000;
+	sum = sum + y;
+	sum = sum * 1000;
+	sum = sum + z;
+	return sum;
 }

@@ -29,4 +29,6 @@ public:
 	virtual color Getcolor();
 	GfxInfo& GetGfxInfo();
 
+	int getdrawcolour();
+
 };

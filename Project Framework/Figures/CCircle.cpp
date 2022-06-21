@@ -103,7 +103,7 @@ int CCircle::thirdcornery()
 
 int CCircle::objencoded()
 {
-	return 0;
+	return 1;
 }
 
 
@@ -113,4 +113,17 @@ string CCircle::GetName() {
 
 GfxInfo& CCircle::GetGfxInfo() {
 	return FigGfxInfo;
+}
+
+int CCircle::getdrawcolour()
+{
+	int x = FigGfxInfo.DrawClr.ucRed;
+	int y = FigGfxInfo.DrawClr.ucGreen;
+	int z = FigGfxInfo.DrawClr.ucBlue;
+	int sum = x;
+	sum = sum * 1000;
+	sum = sum+y;
+	sum = sum * 1000;
+	sum = sum+z;
+	return sum;
 }

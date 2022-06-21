@@ -106,7 +106,7 @@ void CTriangle::drawloadaction(Output* pOut,int arr[])
 
 int CTriangle::objencoded()
 {
-	return 3;
+	return 4;
 }
 
 string CTriangle::GetName() {
@@ -132,4 +132,16 @@ int CTriangle::thirdcornery()
 	return Corner3.y;
 }
 
+int CTriangle::getdrawcolour()
+{
+	int x = FigGfxInfo.DrawClr.ucRed;
+	int y = FigGfxInfo.DrawClr.ucGreen;
+	int z = FigGfxInfo.DrawClr.ucBlue;
+	int sum = x;
+	sum = sum * 1000;
+	sum = sum + y;
+	sum = sum * 1000;
+	sum = sum + z;
+	return sum;
+}
 

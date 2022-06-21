@@ -30,5 +30,5 @@ public:
 
 	virtual string GetName();
 	virtual GfxInfo& GetGfxInfo();
-
+	int getdrawcolour();
 };

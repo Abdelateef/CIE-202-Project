@@ -29,6 +29,7 @@ public:
 	GfxInfo& GetGfxInfo();
 
 	int objencoded();
+	int getdrawcolour();
 };
 
 #endif

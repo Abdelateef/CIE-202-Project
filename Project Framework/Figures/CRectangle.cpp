@@ -120,5 +120,18 @@ GfxInfo& CRectangle::GetGfxInfo() {
 
 int CRectangle::objencoded()
 {
-	return 2;
+	return 3;
+}
+
+int CRectangle::getdrawcolour()
+{
+	int x = FigGfxInfo.DrawClr.ucRed;
+	int y = FigGfxInfo.DrawClr.ucGreen;
+	int z = FigGfxInfo.DrawClr.ucBlue;
+	int sum = x;
+	sum = sum * 1000;
+	sum = sum + y;
+	sum = sum * 1000;
+	sum = sum + z;
+	return sum;
 }
