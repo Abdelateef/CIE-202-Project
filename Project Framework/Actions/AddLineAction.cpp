@@ -11,31 +11,47 @@ AddLineAction::AddLineAction(ApplicationManager * pApp):Action(pApp)
 
 void AddLineAction::ReadActionParameters()
 {	
-	//Get a Pointer to the Input / Output Interfaces
-	Output* pOut = pManager->GetOutput();
-	Input* pIn = pManager->GetInput();
+		//Get a Pointer to the Input / Output Interfaces
+		Output* pOut = pManager->GetOutput();
+		Input* pIn = pManager->GetInput();
 
-	pOut->PrintMessage("New Line: Click at first corner");
-	
-	//Read 1st corner and store in point P1
-	pIn->GetPointClicked(P1.x, P1.y);
+		pOut->PrintMessage("New Line: Click at first corner");
+		bool point1found = false;
+		do {
+			pIn->GetPointClicked(P1.x, P1.y);//Read 1st corner and store in point P1
+			if (P1.y >= UI.ToolBarHeight && P1.y < UI.height - UI.StatusBarHeight) {
+				pOut->PrintMessage("New Line: Click at second corner");
+				point1found = true;
+			}
+			else {
+				pOut->PrintMessage("point one is out of Drawing area range , please reenter point one");
+			}
+			if (point1found == true) {
+				bool point2found = false;
+				do
+				{
+					pIn->GetPointClicked(P2.x, P2.y);//Read 2nd corner and store in point P2
+					if (P2.y >= UI.ToolBarHeight && P2.y < UI.height - UI.StatusBarHeight) {
+						//Read 2nd corner and store in point P2
+						point2found = true;
+						if (UI.filled_OR_not) //default is not filled
+							LineGfxInfo.isFilled = true;
+						else
+							LineGfxInfo.isFilled = false;
+						//get drawing, filling colors and pen width from the interface
+						LineGfxInfo.DrawClr = pOut->getCrntDrawColor();
+						LineGfxInfo.FillClr = pOut->getCrntFillColor();
+						LineGfxInfo.BorderWdth = pOut->getCrntPenWidth();
 
-	pOut->PrintMessage("New Line: Click at second corner");
+						pOut->ClearStatusBar();
+					}
+					else {
+						pOut->PrintMessage("point two is out of Drawing area range , please reenter point two");
+					}
 
-	//Read 2nd corner and store in point P2
-	pIn->GetPointClicked(P2.x, P2.y);
-
-	if (UI.filled_OR_not) //default is not filled
-		LineGfxInfo.isFilled = true;
-	else
-		LineGfxInfo.isFilled = false;
-	//get drawing, filling colors and pen width from the interface
-	LineGfxInfo.DrawClr = pOut->getCrntDrawColor();
-	LineGfxInfo.FillClr = pOut->getCrntFillColor();
-	LineGfxInfo.BorderWdth = pOut->getCrntPenWidth();
-
-	pOut->ClearStatusBar();
-
+				} while (point2found == false);
+			}
+		} while (point1found == false);
 }
 
 //Execute the action
