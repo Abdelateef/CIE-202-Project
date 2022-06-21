@@ -72,22 +72,22 @@ CFigure* CRectangle::Clone(Point click) {
 
 int CRectangle::x1()
 {
-	return 0;
+	return Corner1.x;
 }
 
 int CRectangle::x2()
 {
-	return 0;
+	return Corner2.x;
 }
 
 int CRectangle::y1()
 {
-	return 0;
+	return Corner1.y;
 }
 
 int CRectangle::y2()
 {
-	return 0;
+	return Corner2.y;
 }
 
 void CRectangle::drawloadaction(Output* pOut,int arr[])
@@ -98,6 +98,7 @@ void CRectangle::drawloadaction(Output* pOut,int arr[])
 string CRectangle::GetName() {
 	return "Rectangle";
 }
+<<<<<<< Updated upstream
 color CRectangle::Getcolor() {
 	if (FigGfxInfo.isFilled)
 	return FigGfxInfo.FillClr;
@@ -107,3 +108,10 @@ color CRectangle::Getcolor() {
 GfxInfo& CRectangle::GetGfxInfo() {
 	return FigGfxInfo;
 }
+=======
+
+int CRectangle::objencoded()
+{
+	return 2;
+}
+>>>>>>> Stashed changes

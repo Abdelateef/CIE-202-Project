@@ -1,8 +1,10 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Save.cpp
+=======
+>>>>>>> Stashed changes
   Load.cpp
-  Generating Code...
   PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe
 =======
   main.cpp

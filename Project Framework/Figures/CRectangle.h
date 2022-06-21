@@ -23,10 +23,14 @@ public:
 	void drawloadaction(Output* pOut,int arr[]);
 <<<<<<< Updated upstream
 	string GetName();
+<<<<<<< Updated upstream
 =======
 	virtual string GetName();
 	virtual color Getcolor();
 	GfxInfo& GetGfxInfo();
+>>>>>>> Stashed changes
+=======
+	int objencoded();
 >>>>>>> Stashed changes
 };
 

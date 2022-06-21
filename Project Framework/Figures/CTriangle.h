@@ -19,8 +19,12 @@ public:
 	int y1();
 	int y2();
 	void drawloadaction(Output* pOut,int arr[]);
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
+=======
+	int objencoded();
+>>>>>>> Stashed changes
 	string GetName();
 =======
 	virtual string GetName();
