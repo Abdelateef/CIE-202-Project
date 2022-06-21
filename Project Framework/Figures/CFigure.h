@@ -60,7 +60,8 @@ public:
 
 		/*A function to return gfx of a figure*/
 	virtual GfxInfo& GetGfxInfo() = 0;
-	virtual int getdrawcolour() = 0;
+	virtual int getdrawcolour() = 0; // returns the value of the draw colours
+	virtual int getfillcolour() = 0; // returns the value fill colours
 };
 
 #endif

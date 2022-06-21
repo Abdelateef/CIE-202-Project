@@ -31,4 +31,5 @@ public:
 	virtual string GetName();
 	virtual GfxInfo& GetGfxInfo();
 	int getdrawcolour();
+	int getfillcolour();
 };

@@ -127,3 +127,16 @@ int CCircle::getdrawcolour()
 	sum = sum+z;
 	return sum;
 }
+
+int CCircle::getfillcolour()
+{
+	int x = FigGfxInfo.FillClr.ucRed;
+	int y = FigGfxInfo.FillClr.ucGreen;
+	int z = FigGfxInfo.FillClr.ucBlue;
+	int sum = x;
+	sum = sum * 1000;
+	sum = sum + y;
+	sum = sum * 1000;
+	sum = sum + z;
+	return sum;
+}

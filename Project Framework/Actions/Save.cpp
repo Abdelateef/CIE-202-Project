@@ -56,6 +56,7 @@ void Save::Execute()
 		
 		file << mylist[i]->objencoded() << endl;
 		file << mylist[i]->getdrawcolour() << endl;
+		file << mylist[i]->getfillcolour() << endl;
 	}
 	file.close();
 }

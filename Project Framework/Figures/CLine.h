@@ -31,4 +31,6 @@ public:
 
 	int getdrawcolour();
 
+	int getfillcolour();
+
 };

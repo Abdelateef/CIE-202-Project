@@ -29,4 +29,5 @@ public:
 	int thirdcornerx();
 	int thirdcornery();
 	int getdrawcolour();
+	int getfillcolour();
 };

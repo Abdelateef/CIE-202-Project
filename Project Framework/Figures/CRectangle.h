@@ -30,6 +30,7 @@ public:
 
 	int objencoded();
 	int getdrawcolour();
+	int getfillcolour();
 };
 
 #endif
