@@ -15,7 +15,7 @@ public:
 	void CreateStatusBar() const;	//create the status bar
 	void CreateColorToolBar() const; //Creat color tool Bar 
 	void CreateSizeToolBar() const; //Create size tool bar
-
+	void Createfillandunfilltoobar(); // creat a selected and unselected tool bar
 	void CreateColorToolBar(int) const; //Creat color tool bar 
 	Input* CreateInput() const; //creates a pointer to the Input object	
 	void ClearToolBar()const;     //Clear the status bar

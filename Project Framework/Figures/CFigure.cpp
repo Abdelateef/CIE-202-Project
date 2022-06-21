@@ -22,7 +22,9 @@ void CFigure::ChngFillClr(color Fclr)
 	FigGfxInfo.isFilled = true;
 	FigGfxInfo.FillClr = Fclr; 
 }
-
+void CFigure::changewedith(int n) {
+	FigGfxInfo.BorderWdth = n;
+}
 
 int CFigure :: objcountreturn()
 {

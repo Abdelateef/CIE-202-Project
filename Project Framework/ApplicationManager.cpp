@@ -87,19 +87,49 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		pOut->CreateSizeToolBar();
 		break;
 	case SET_tiny:
-		UI.PenWidth = 2;
-		pOut->CreateDrawToolBar();
-		break;
+		for (int i = 0; i < GetFigurecount(); i++) {
+			if (FigList[i]->IsSelected()) {
+				FigList[i]->changewedith(2);
+				pOut->CreateDrawToolBar();
+				selectedfound = true;
+				FigList[i]->SetSelected(false);
+			}
+		}
+		if (selectedfound == false) {
+			UI.PenWidth = 2;
+			pOut->CreateDrawToolBar();
+		}
+	break;
 	case SET_Normal:
-		UI.PenWidth = 4;
-		pOut->CreateDrawToolBar();
+		for (int i = 0; i < GetFigurecount(); i++) {
+			if (FigList[i]->IsSelected()) {
+				FigList[i]->changewedith(4);
+				pOut->CreateDrawToolBar();
+				selectedfound = true;
+				FigList[i]->SetSelected(false);
+			}
+		}
+		if (selectedfound == false) {
+			UI.PenWidth = 4;
+			pOut->CreateDrawToolBar();
+		}
 		break;
 	case SET_BACK:
 		pOut->CreateDrawToolBar();
 		break;
 	case SET_Large:
-		UI.PenWidth = 9;
-		pOut->CreateDrawToolBar();
+		for (int i = 0; i < GetFigurecount(); i++) {
+			if (FigList[i]->IsSelected()) {
+				FigList[i]->changewedith(9);
+				pOut->CreateDrawToolBar();
+				selectedfound = true;
+				FigList[i]->SetSelected(false);
+			}
+		}
+		if (selectedfound == false) {
+			UI.PenWidth = 9;
+			pOut->CreateDrawToolBar();
+		}
 		break;
 	case CHNG_DRAW_CLR:
 		UI.InterfaceMode = MODE_DRAW_COLOR;

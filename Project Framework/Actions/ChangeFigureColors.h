@@ -13,6 +13,8 @@ class ChangeFigureColors :public Action
 	ActionType actType;
 	Output* pOut;
 	Input* pIn;
+	bool selectedFound = false;
+	CFigure* Selectedlist[200];
 public:
 	ChangeFigureColors(ApplicationManager*, GUI_MODE);
 

@@ -20,6 +20,7 @@ private:
 	Output *pOut;
 	CFigure* application_clipboard[200];
 	int numofcopiedfig =0;
+	bool selectedfound = false;
 
 public:	
 
