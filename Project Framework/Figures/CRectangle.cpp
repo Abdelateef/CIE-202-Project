@@ -33,12 +33,10 @@ bool CRectangle::isWithinMe(Point click) {
 
 void CRectangle::Drawpastfigures(Output* pOut,Point Click) const {
 	Point NewCorner1, NewCorner2;
-	int rectangle_Width = (Corner1.x - Corner2.x);
-	int retangle_Higth = (Corner1.y - Corner1.y);
 	NewCorner1.x = Click.x - ((Corner1.x - Corner2.x) / 2);
-	NewCorner1.y = Click.y - ((Corner1.y - Corner1.y) / 2);
+	NewCorner1.y = Click.y - ((Corner1.y - Corner2.y) / 2);
 	NewCorner2.x = Click.x + ((Corner1.x - Corner2.x) / 2);
-	NewCorner2.y = Click.y + ((Corner1.y - Corner1.y) / 2);
+	NewCorner2.y = Click.y + ((Corner1.y - Corner2.y) / 2);
 
 	pOut->DrawRect(NewCorner1, NewCorner2, FigGfxInfo, Selected == false);
 }

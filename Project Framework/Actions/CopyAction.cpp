@@ -30,7 +30,7 @@ void CopyAction::ReadActionParameters() {
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 	if (pManager->GetFigurecount() == 0 ) {
-		pOut->PrintMessage("No Figure to Copy!");
+		pOut->PrintMessage("Copy Action : No Figure to Copy!");
 	}
 		CFigure* FigureList[200];
 		pManager->GetFigureList(FigureList);
@@ -41,11 +41,12 @@ void CopyAction::ReadActionParameters() {
 			bool found = 0;
 			if (FigureList[i]->IsSelected()) {
 				pManager->Copied_FigureList[i] = FigureList[i];
+				pManager->SetNumofCopied_Figurelist(pManager->Copied_FigureList[i]);
 				found = 1;
 			}
 			else {
 				if (found == 0) {
-					pOut->PrintMessage("No Figure Selected!");
+					pOut->PrintMessage("Copy Action : No Figure Selected!");
 				}
 			}
 		}

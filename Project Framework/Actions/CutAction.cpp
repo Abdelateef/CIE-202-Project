@@ -24,7 +24,7 @@ void CutAction::ReadActionParameters() {
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 	if (pManager->GetFigurecount() == 0) {
-		pOut->PrintMessage("No Figure to Cut!");
+		pOut->PrintMessage("Cut Action : No Figure to Cut!");
 	}
 		CFigure* FigureList[200];
 		pManager->GetFigureList(FigureList);
@@ -35,12 +35,13 @@ void CutAction::ReadActionParameters() {
 			bool found = 0;
 			if (FigureList[i]->IsSelected()) {
 				pManager->Copied_FigureList[i] = FigureList[i];
+				pManager->SetNumofCopied_Figurelist(pManager->Copied_FigureList[i]);
 				pManager->MakeFigNull(FigureList[i]);
 				found = 1;
 			}
 			else {
 				if (found == 0) {
-					pOut->PrintMessage("No figure selected");
+					pOut->PrintMessage("Cut Action : No figure selected");
 				}
 			}
 		}

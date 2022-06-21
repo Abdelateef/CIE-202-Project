@@ -26,29 +26,51 @@ void PasteAction::ReadActionParameters() {
 	CFigure* FigureList[200];
 	pManager->GetFigureList(FigureList);
 
-	if (pManager->GetFigurecount() == 0 && pManager->Copied_FigureList[0]==NULL) {
-		pOut->PrintMessage("No Figure to paste!");
-	}
-	else {
-		pOut->PrintMessage("Paste Figure : Clink a point click");
-		int x, y = 0;
-		pIn->GetPointClicked(x, y);
-		Point click(x, y);
-
-		for (int i = 0; i < 200; i++) {
-
-			if (pManager->Copied_FigureList[i] != NULL) {
-				CFigure* R = ((pManager->Copied_FigureList[i]));
-				CFigure* RR = (pManager->Copied_FigureList[i]->Clone(click));
-				R->Drawpastfigures(pOut, click);
-				pManager->AddFigure(RR);
-			}
+	if (pManager->gettNumofCopied_Figurelist() == 0 || pManager->GetFigurecount() == 0) {
+		if (pManager->gettNumofCopied_Figurelist() == 0) {
+			pOut->PrintMessage("Paste Figure : NO figure are copied or cut");
 		}
-		string Outputt = to_string(pManager->GetFigurecount());
-		pOut->PrintMessage(Outputt);
-	}
-	
+		else if (pManager->GetFigurecount() == 0 && pManager->gettNumofCopied_Figurelist() != 0) {
+			pOut->PrintMessage("Paste Figure : Clink a point click");
+			int x, y = 0;
+			pIn->GetPointClicked(x, y);
+			Point click(x, y);
+
+			for (int i = 0; i < 200; i++) {
+
+				if (pManager->Copied_FigureList[i] != NULL) {
+					CFigure* R = ((pManager->Copied_FigureList[i]));
+					CFigure* RR = (pManager->Copied_FigureList[i]->Clone(click));
+					R->Drawpastfigures(pOut, click);
+					pManager->AddFigure(RR);
+				}
+			}
+			pOut->PrintMessage("Paste Action : Figure has been Pasted");
+		}
+		else {
+			pOut->PrintMessage("Paste Figure : No Figure to paste!");
+		}
+		}
+		else {
+			pOut->PrintMessage("Paste Figure : Clink a point click");
+			int x, y = 0;
+			pIn->GetPointClicked(x, y);
+			Point click(x, y);
+
+			for (int i = 0; i < 200; i++) {
+
+				if (pManager->Copied_FigureList[i] != NULL) {
+					CFigure* R = ((pManager->Copied_FigureList[i]));
+					CFigure* RR = (pManager->Copied_FigureList[i]->Clone(click));
+					R->Drawpastfigures(pOut, click);
+					pManager->AddFigure(RR);
+				}
+			}
+			pOut->PrintMessage("Paste Action : Figure has been Pasted");
+		}
 }
+
+	
 void PasteAction::Execute() {
 	ReadActionParameters();
 }

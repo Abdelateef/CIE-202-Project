@@ -29,6 +29,7 @@ ApplicationManager::ApplicationManager()
 		FigList[i] = NULL;
 }
 
+
 //==================================================================================//
 //								Actions Related Functions							//
 //==================================================================================//
@@ -170,6 +171,21 @@ CFigure* ApplicationManager::GetFigure(int x, int y) const
 
 	return NULL;
 }
+
+////////////////////
+void ApplicationManager::SetNumofCopied_Figurelist(CFigure* fig)
+{
+	for (int i = 0; i < 200; i++) {
+		if (FigList[i] == fig)
+			numofcopiedfig++;
+	}
+}
+/////////////////
+int ApplicationManager::gettNumofCopied_Figurelist()
+{
+	return numofcopiedfig;
+}
+
 //==================================================================================//
 //							Interface Management Functions							//
 //==================================================================================//
@@ -196,6 +212,13 @@ Output* ApplicationManager::GetOutput() const
 void  ApplicationManager::GetFigureList(CFigure* FigureListNew[]) {
 	for (int i = 0; i < MaxFigCount; i++) {
 		FigureListNew[i] = FigList[i];
+	}
+}
+
+void ApplicationManager::MakecopiedFigNULL()
+{
+	for (int i = 0; i < 200; i++) {
+		Copied_FigureList[i] = NULL;
 	}
 }
 
@@ -244,7 +267,6 @@ void ApplicationManager::CansSelectedFigure(CFigure* Figure)
 		}
 	}
 }
-
 
 
 
