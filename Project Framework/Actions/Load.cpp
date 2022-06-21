@@ -136,14 +136,14 @@ void Load::ReadActionParameters()
 			circle.FillClr = pOut->getCrntFillColor();
 			CLine* test = new CLine(Corner1, Corner2, circle);
 			pManager->AddFigure(test);
-			c1 = c1 + 6;
-			c2 = c2 + 6;
-			c3 = c3 + 6;
-			c4 = c4 + 6;
-			c5 = c5 + 6;
-			c6 = c6 + 6;
-			c7 = c7 + 6;
-			c8 = c8 + 6;
+			c1 = c1 + 7;
+			c2 = c2 + 7;
+			c3 = c3 + 7;
+			c4 = c4 + 7;
+			c5 = c5 + 7;
+			c6 = c6 + 7;
+			c7 = c7 + 7;
+			c8 = c8 + 7;
 			drawcolourtriangle = drawcolourtriangle + 7;
 			fillcolourtriangle = fillcolourtriangle + 7;
 			if (c4 > arrcounter)
