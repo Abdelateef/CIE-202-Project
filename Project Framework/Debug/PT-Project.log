@@ -1,8 +1,12 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-<<<<<<< Updated upstream
+  CRectangle.cpp
+  SelectAction.cpp
+  PlayActionFigureType_FillColor.cpp
+  PlayActionFigureType.cpp
+  PlayActionFigureFillColor.cpp
   Load.cpp
-  PT-Project.vcxproj -> D:\github c++\CIE-202-Project\Project Framework\Debug\PT Project.exe
-=======
-  AddTriaAction.cpp
+  AddRectAction.cpp
+  Generating Code...
+F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Figures\CRectangle.cpp(115): warning C4715: 'CRectangle::Getcolor': not all control paths return a value
+AddCircAction.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> F:\University of Science and Technology at Zewail City\My-Github\CIE-202-Project\Project Framework\Debug\PT Project.exe
->>>>>>> Stashed changes

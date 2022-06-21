@@ -20,13 +20,7 @@ public:
 	int y2();
 	void drawloadaction(Output* pOut,int arr[]);
 
-<<<<<<< Updated upstream
-
-
-
 	int objencoded();
-
-	
 
 	virtual string GetName();
 	virtual color Getcolor();
@@ -34,9 +28,4 @@ public:
 
 	int thirdcornerx();
 	int thirdcornery();
-=======
-	virtual string GetName();
-	virtual color Getcolor();
-	GfxInfo& GetGfxInfo();
->>>>>>> Stashed changes
 };
