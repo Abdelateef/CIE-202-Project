@@ -82,22 +82,22 @@ int CTriangle::radius()
 
 int CTriangle::x1()
 {
-	return 0;
+	return Corner1.x;
 }
 
 int CTriangle::x2()
 {
-	return 0;
+	return Corner2.x;
 }
 
 int CTriangle::y1()
 {
-	return 0;
+	return Corner1.y;
 }
 
 int CTriangle::y2()
 {
-	return 0;
+	return Corner2.y;
 }
 
 void CTriangle::drawloadaction(Output* pOut,int arr[])
@@ -120,6 +120,16 @@ color CTriangle::Getcolor() {
 
 GfxInfo& CTriangle::GetGfxInfo() {
 	return FigGfxInfo;
+}
+
+int CTriangle::thirdcornerx()
+{
+	return Corner3.x;
+}
+
+int CTriangle::thirdcornery()
+{
+	return Corner3.y;
 }
 
 

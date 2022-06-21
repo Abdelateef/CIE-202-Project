@@ -91,6 +91,16 @@ void CCircle::drawloadaction(Output* pOut,int arr[])
 	pOut->DrawCirc(ncorner1, ncorner2, FigGfxInfo, Selected == false);
 }
 
+int CCircle::thirdcornerx()
+{
+	return -1;
+}
+
+int CCircle::thirdcornery()
+{
+	return -1;
+}
+
 int CCircle::objencoded()
 {
 	return 0;

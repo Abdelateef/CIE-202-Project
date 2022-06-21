@@ -43,10 +43,17 @@ void Save::Execute()
 	file.open("file1");
 	for (int i = 0; i < c; i++)
 	{
+		
 		file << mylist[i]->x1()<<endl;
 		file << mylist[i]->x2()<<endl;
 		file << mylist[i]->y1() << endl;
 		file << mylist[i]->y2()<<endl;
+		if (mylist[i]->thirdcornerx()!=-1)
+		{
+			file << mylist[i]->thirdcornerx() << endl;
+			file << mylist[i]->thirdcornery() << endl;
+		}
+		
 		file << mylist[i]->objencoded() << endl;
 	}
 	file.close();

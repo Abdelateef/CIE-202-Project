@@ -101,6 +101,16 @@ void CLine::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+int CLine::thirdcornerx()
+{
+	return -1;
+}
+
+int CLine::thirdcornery()
+{
+	return -1;
+}
+
 int CLine::objencoded()
 {
 	return 1;

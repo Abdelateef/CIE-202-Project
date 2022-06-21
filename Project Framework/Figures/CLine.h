@@ -20,16 +20,16 @@ public:
 	int y1();
 	int y2();
 	void drawloadaction(Output* pOut,int arr[]);
-<<<<<<< Updated upstream
+	int thirdcornerx();
+	int thirdcornery();
 
-<<<<<<< Updated upstream
-=======
+
 	int objencoded();
->>>>>>> Stashed changes
-	string GetName();
-=======
+
+	
+
 	virtual string GetName();
 	virtual color Getcolor();
 	GfxInfo& GetGfxInfo();
->>>>>>> Stashed changes
+
 };

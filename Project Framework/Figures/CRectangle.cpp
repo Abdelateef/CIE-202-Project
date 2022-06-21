@@ -94,11 +94,21 @@ void CRectangle::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+int CRectangle::thirdcornerx()
+{
+	return -1;
+}
+
+int CRectangle::thirdcornery()
+{
+	return -1;
+}
+
 
 string CRectangle::GetName() {
 	return "Rectangle";
 }
-<<<<<<< Updated upstream
+
 color CRectangle::Getcolor() {
 	if (FigGfxInfo.isFilled)
 	return FigGfxInfo.FillClr;
@@ -108,10 +118,9 @@ color CRectangle::Getcolor() {
 GfxInfo& CRectangle::GetGfxInfo() {
 	return FigGfxInfo;
 }
-=======
+
 
 int CRectangle::objencoded()
 {
 	return 2;
 }
->>>>>>> Stashed changes

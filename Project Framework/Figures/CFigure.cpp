@@ -28,3 +28,5 @@ int CFigure :: objcountreturn()
 {
 	return ID;
 }
+
+

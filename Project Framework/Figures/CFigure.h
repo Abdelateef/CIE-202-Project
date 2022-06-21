@@ -33,7 +33,8 @@ public:
 	virtual int objencoded() = 0;
 
 	int objcountreturn();
-
+	virtual int thirdcornerx()=0;
+	virtual int thirdcornery()=0;
 	///The following functions should be supported by the figure class
 	///It should be overridden by each inherited figure
 

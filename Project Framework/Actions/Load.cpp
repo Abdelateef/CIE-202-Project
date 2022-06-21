@@ -6,6 +6,7 @@
 #include "..\Figures\CCircle.h"
 #include "..\\Figures\CRectangle.h"
 #include "..\\Figures\CLine.h"
+#include "..\\Figures\CTriangle.h"
 #include <fstream>
 using namespace std;
 
@@ -38,8 +39,8 @@ void Load::ReadActionParameters()
 		}
 
 	}
-	Point Corner1, Corner2;
-	int x, i = 0, c1 = 0, c2 = 2, c3 = 1, c4 = 3, c5=4, arrcounter = 0;
+	Point Corner1, Corner2, Corner3;
+	int x, i = 0, c1 = 0, c2 = 2, c3 = 1, c4 = 3, c5=4, c6=4, c7=5, arrcounter = 0;
 	string y, test;
 	int* arr = new int[i];
 	Output* pOut = pManager->GetOutput();
@@ -57,9 +58,9 @@ void Load::ReadActionParameters()
 		i++;
 		arrcounter++;
 	}
-	for (int i = 0; i < arrcounter - 1; i++)
+	for (int i = 0; i < arrcounter ; i++)
 	{
-		if (arr[c5] == 0)
+		if (arr[i] == 0)
 		{
 			Corner1.x = arr[c1];
 			Corner1.y = arr[c2];
@@ -77,13 +78,16 @@ void Load::ReadActionParameters()
 			c3 = c3 + 5;
 			c4 = c4 + 5;
 			c5 = c5 + 5;
+			c6 = c6 + 5;
+			c7 = c7 + 5;
 			if (c4 > arrcounter)
 			{
 				break;
 			}
 		}
-		if (arr[c5]==1)
+		if (arr[i]==1)
 		{
+			
 			Corner1.x = arr[c1];
 			Corner1.y = arr[c2];
 			Corner2.x = arr[c3];
@@ -100,12 +104,14 @@ void Load::ReadActionParameters()
 			c3 = c3 + 5;
 			c4 = c4 + 5;
 			c5 = c5 + 5;
+			c6 = c6 + 5;
+			c7 = c7 + 5;
 			if (c4 > arrcounter)
 			{
 				break;
 			}
 		}
-		if (arr[c5]==2)
+		if (arr[i]==2)
 		{
 			Corner1.x = arr[c1];
 			Corner1.y = arr[c2];
@@ -123,6 +129,35 @@ void Load::ReadActionParameters()
 			c3 = c3 + 5;
 			c4 = c4 + 5;
 			c5 = c5 + 5;
+			c6 = c6 + 5;
+			c7 = c7 + 5;
+			if (c4 > arrcounter)
+			{
+				break;
+			}
+		}
+		if (arr[i]==3)
+		{
+			Corner1.x = arr[c1];
+			Corner1.y = arr[c2];
+			Corner2.x = arr[c3];
+			Corner2.y = arr[c4];
+			Corner3.x = arr[c6];
+			Corner3.y = arr[c7];
+			GfxInfo circle;
+			circle.isFilled = false;
+			circle.BorderWdth = pOut->getCrntPenWidth();
+			circle.DrawClr = pOut->getCrntDrawColor();
+			circle.FillClr = pOut->getCrntFillColor();
+			CTriangle* test = new CTriangle(Corner1, Corner2,Corner3, circle);
+			pManager->AddFigure(test);
+			c1 = c1 + 7;
+			c2 = c2 + 7;
+			c3 = c3 + 7;
+			c4 = c4 + 7;
+			c5 = c5 + 7;
+			c6 = c6 + 7;
+			c7 = c7 + 7;
 			if (c4 > arrcounter)
 			{
 				break;
