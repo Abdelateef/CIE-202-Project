@@ -47,7 +47,7 @@ void Save::Execute()
 		file << mylist[i]->x2()<<endl;
 		file << mylist[i]->y1() << endl;
 		file << mylist[i]->y2()<<endl;
-		file << mylist[i]->GetName() << endl;
+		file << mylist[i]->objencoded() << endl;
 	}
 	file.close();
 }

@@ -30,7 +30,7 @@ public:
 	virtual int y1() = 0;
 	virtual int y2() = 0;
 	virtual void drawloadaction(Output* pOut,int arr[]) = 0;
-
+	virtual int objencoded() = 0;
 
 	int objcountreturn();
 

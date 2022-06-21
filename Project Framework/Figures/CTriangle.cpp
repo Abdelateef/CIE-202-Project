@@ -104,6 +104,11 @@ void CTriangle::drawloadaction(Output* pOut,int arr[])
 {
 }
 
+int CTriangle::objencoded()
+{
+	return 3;
+}
+
 string CTriangle::GetName() {
 	return "Triangle";
 }

@@ -91,6 +91,11 @@ void CCircle::drawloadaction(Output* pOut,int arr[])
 	pOut->DrawCirc(ncorner1, ncorner2, FigGfxInfo, Selected == false);
 }
 
+int CCircle::objencoded()
+{
+	return 0;
+}
+
 
 string CCircle::GetName() {
 	return "Circle";

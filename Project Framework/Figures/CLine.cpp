@@ -79,26 +79,31 @@ CFigure* CLine::Clone(Point click) {
 
 int CLine::x1()
 {
-	return 0;
+	return Corner1.x;
 }
 
 int CLine::x2()
 {
-	return 0;
+	return Corner2.x;
 }
 
 int CLine::y1()
 {
-	return 0;
+	return Corner1.y;
 }
 
 int CLine::y2()
 {
-	return 0;
+	return Corner2.y;
 }
 
 void CLine::drawloadaction(Output* pOut,int arr[])
 {
+}
+
+int CLine::objencoded()
+{
+	return 1;
 }
 
 string CLine::GetName() {

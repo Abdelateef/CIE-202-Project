@@ -5,6 +5,7 @@
 #include "..\GUI\Output.h"
 #include "..\Figures\CCircle.h"
 #include "..\\Figures\CRectangle.h"
+#include "..\\Figures\CLine.h"
 #include <fstream>
 using namespace std;
 
@@ -38,7 +39,8 @@ void Load::ReadActionParameters()
 
 	}
 	Point Corner1, Corner2;
-	int x, i = 0, c1 = 0, c2 = 2, c3 = 1, c4 = 3, arrcounter = 0;
+	int x, i = 0, c1 = 0, c2 = 2, c3 = 1, c4 = 3, c5=4, arrcounter = 0;
+	string y, test;
 	int* arr = new int[i];
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
@@ -55,28 +57,80 @@ void Load::ReadActionParameters()
 		i++;
 		arrcounter++;
 	}
-	for (int i = 0; i < arrcounter; i++)
+	for (int i = 0; i < arrcounter - 1; i++)
 	{
-		Corner1.x = arr[c1];
-		Corner1.y = arr[c2];
-		Corner2.x = arr[c3];
-		Corner2.y = arr[c4];
-		GfxInfo circle;
-		circle.isFilled = false;
-		circle.BorderWdth = pOut->getCrntPenWidth();
-		circle.DrawClr = pOut->getCrntDrawColor();
-		circle.FillClr = pOut->getCrntFillColor();
-		CCircle* test = new CCircle(Corner1, Corner2, circle);
-		pManager->AddFigure(test);
-		c1 = c1 + 4;
-		c2 = c2 + 4;
-		c3 = c3 + 4;
-		c4 = c4 + 4;
-		if (c4>arrcounter)
+		if (arr[c5] == 0)
 		{
-			break;
+			Corner1.x = arr[c1];
+			Corner1.y = arr[c2];
+			Corner2.x = arr[c3];
+			Corner2.y = arr[c4];
+			GfxInfo circle;
+			circle.isFilled = false;
+			circle.BorderWdth = pOut->getCrntPenWidth();
+			circle.DrawClr = pOut->getCrntDrawColor();
+			circle.FillClr = pOut->getCrntFillColor();
+			CCircle* test = new CCircle(Corner1, Corner2, circle);
+			pManager->AddFigure(test);
+			c1 = c1 + 5;
+			c2 = c2 + 5;
+			c3 = c3 + 5;
+			c4 = c4 + 5;
+			c5 = c5 + 5;
+			if (c4 > arrcounter)
+			{
+				break;
+			}
+		}
+		if (arr[c5]==1)
+		{
+			Corner1.x = arr[c1];
+			Corner1.y = arr[c2];
+			Corner2.x = arr[c3];
+			Corner2.y = arr[c4];
+			GfxInfo circle;
+			circle.isFilled = false;
+			circle.BorderWdth = pOut->getCrntPenWidth();
+			circle.DrawClr = pOut->getCrntDrawColor();
+			circle.FillClr = pOut->getCrntFillColor();
+			CLine* test = new CLine(Corner1, Corner2, circle);
+			pManager->AddFigure(test);
+			c1 = c1 + 5;
+			c2 = c2 + 5;
+			c3 = c3 + 5;
+			c4 = c4 + 5;
+			c5 = c5 + 5;
+			if (c4 > arrcounter)
+			{
+				break;
+			}
+		}
+		if (arr[c5]==2)
+		{
+			Corner1.x = arr[c1];
+			Corner1.y = arr[c2];
+			Corner2.x = arr[c3];
+			Corner2.y = arr[c4];
+			GfxInfo circle;
+			circle.isFilled = false;
+			circle.BorderWdth = pOut->getCrntPenWidth();
+			circle.DrawClr = pOut->getCrntDrawColor();
+			circle.FillClr = pOut->getCrntFillColor();
+			CRectangle* test = new CRectangle(Corner1, Corner2, circle);
+			pManager->AddFigure(test);
+			c1 = c1 + 5;
+			c2 = c2 + 5;
+			c3 = c3 + 5;
+			c4 = c4 + 5;
+			c5 = c5 + 5;
+			if (c4 > arrcounter)
+			{
+				break;
+			}
 		}
 	}
+	
+	
 	c1 = 0, c2 = 2, c3 = 1, c4 = 3;
 }
 
