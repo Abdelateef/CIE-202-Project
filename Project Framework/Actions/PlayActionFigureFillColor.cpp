@@ -1,4 +1,4 @@
-#include "PlayActionFigureType.h"
+#include "PlayActionFigureFillColor.h"
 #include"../ApplicationManager.h"
 #include"../Figures/CCircle.h"
 #include"../Figures/CLine.h"
@@ -13,33 +13,32 @@
 using namespace std;
 
 
-
-PlayActionFigureType::PlayActionFigureType(ApplicationManager* pApp) :Action(pApp)
+PlayActionFigureFillColor::PlayActionFigureFillColor(ApplicationManager* pApp) :Action(pApp)
 {
 	Output* pOut = pManager->GetOutput();
-	pOut->CreateUnfilledselected_shape();
+	pOut->Output::Createsamecoloredselected_shape();
 }
 
-PlayActionFigureType::~PlayActionFigureType(void)
+PlayActionFigureFillColor::~PlayActionFigureFillColor(void)
 {}
 
 
-void PlayActionFigureType::ReadActionParameters()
+void PlayActionFigureFillColor::ReadActionParameters()
 {
 	Output* pOut = pManager->GetOutput();
 	Input* pIn = pManager->GetInput();
 
 
-	if (UI.InterfaceMode == MODE_UNFILL_SHAPES) {
-		pOut->PrintMessage("Chose a shape to start play the figure type mode");
-		pOut->CreateUnfilledselected_shape();
+	if (UI.InterfaceMode == MODE_SMAME_COLOR_SHAPES) {
+		pOut->PrintMessage("Chose a color to start play the figure fill color mode");
+		pOut->Createsamecoloredselected_shape();
 
 		int x, y;
 		subAction = pIn->GetUserAction(x, y);
 	}
 }
 
-void PlayActionFigureType::Execute() {
+void PlayActionFigureFillColor::Execute() {
 	Output* pOut = pManager->GetOutput();
 	ReadActionParameters();
 	setFiguretype();
@@ -49,16 +48,16 @@ void PlayActionFigureType::Execute() {
 		pOut->CreatePlayToolBar();
 	}
 	else {
-		if (pManager->GetNumOfFigType(FigureType) == 0) {
+		if (pManager->GetNumOfFigcolor(Figurecolor) == 0) {
 			pOut->PrintMessage("No figure of this type ");
 			pOut->CreatePlayToolBar();
 		}
 		else {
-			int CountOFUnfillShape = pManager->GetNumOfFigType(FigureType);
-			pOut->PrintMessage("Game started please select unfile" + FigureType + " mode");
+			int CountOFUnfillShape = pManager->GetNumOfFigcolor(Figurecolor);
+			pOut->PrintMessage("Game started please select figure Fill  with " + Figurecolorr + " color ");
 			pOut->CreatePlayToolBar();
 			const int totalcount = pManager->GetFigurecount();
-			const int totall = pManager->GetNumOfFigType(FigureType);
+			const int totall = pManager->GetNumOfFigcolor(Figurecolor);
 			int succcedcount = 1;
 			int wrongcount = 0;
 			int j = 0;
@@ -70,10 +69,12 @@ void PlayActionFigureType::Execute() {
 				int x, y = 0; // intalize Point clicked
 				pIn->GetPointClicked(x, y);
 				Point click(x, y);
-				pManager->GetFigureList(FigureList);
 				bool ClickFound = false;
+				pManager->GetFigureList(FigureList);
 				for (int i = 0; i < pManager->GetFigurecount(); i++) {
-					if (FigureList[i] != NULL && FigureList[i]->GetName() == FigureType && FigureList[i]->GetGfxInfo().isFilled == false) {
+					if (Figurecolor.ucRed == FigureList[i]->GetGfxInfo().FillClr.ucRed &&
+						Figurecolor.ucGreen == FigureList[i]->GetGfxInfo().FillClr.ucGreen &&
+						Figurecolor.ucBlue == FigureList[i]->GetGfxInfo().FillClr.ucBlue){
 						if (FigureList[i]->isWithinMe(click)) {
 							FigureTypeList[j] = FigureList[i];
 							pOut->PrintMessage("Bravo ....you now selected : " + to_string(succcedcount) + " out of : " + to_string(totall));
@@ -86,14 +87,14 @@ void PlayActionFigureType::Execute() {
 						}
 					}
 				}
-				if (!ClickFound) wrongcount += 1;
+				if (!ClickFound) wrongcount += 1;	
 				if (click.y >= 0 && click.y < UI.ToolBarHeight && (click.x / UI.MenuItemWidth) == 4) {
 					RestartFound = true;
 				}
 				if (click.y >= 0 && click.y < UI.ToolBarHeight && (click.x / UI.MenuItemWidth) == 0) {
 					SwitchToDrawModeFound = true;
 				}
-			} while (CountOFUnfillShape != 0 && RestartFound == false && SwitchToDrawModeFound == false);
+		}while (CountOFUnfillShape != 0 && RestartFound == false && SwitchToDrawModeFound == false);
 			if (CountOFUnfillShape == 0) {
 				for (int i = 0; i < (succcedcount - 1); i++) {
 					if (FigureTypeList[i] != NULL)
@@ -120,9 +121,10 @@ void PlayActionFigureType::Execute() {
 	}
 }
 
-void PlayActionFigureType::setFiguretype() {
-	if (subAction == HIDE_CIRC) FigureType = "Circle";
-	else if (subAction == HIDE_TRI)FigureType = "Triangle";
-	else if (subAction == HIDE_RECT) FigureType = "Rectangle";
-	else if (subAction == HIDE_LINE) FigureType = "Line";
+void PlayActionFigureFillColor::setFiguretype() {
+	if (subAction == SET_BLACK) { Figurecolor = BLACK; Figurecolorr = "Black"; }
+	else if (subAction == SET_WHITE){ Figurecolor = WHITE; Figurecolorr = "White"; }
+	else if (subAction == SET_RED) { Figurecolor = RED; Figurecolorr = "Red"; }
+	else if (subAction == SET_GREEN) { Figurecolor = GREEN; Figurecolorr = "Green"; }
+	else if (subAction == SET_BLUE) { Figurecolor = BLUE; Figurecolorr = "Blue"; }
 }

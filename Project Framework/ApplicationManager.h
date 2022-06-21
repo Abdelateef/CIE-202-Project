@@ -48,6 +48,8 @@ public:
 	void UpdateInterface() const;	//Redraws all the drawing window	
 		/*A function to get the number of figures specified by type*/
 	int GetNumOfFigType(string figtype);
+	int GetNumOfFigcolor(color figcolor);
+	int GetnumOfFigsametypecolor(string figtype, color figcolor);
 
 };
 

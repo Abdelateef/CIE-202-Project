@@ -138,7 +138,9 @@
     <ClCompile Include="Actions\DeletAction.cpp" />
     <ClCompile Include="Actions\Load.cpp" />
     <ClCompile Include="Actions\PasteAction.cpp" />
+    <ClCompile Include="Actions\PlayActionFigureFillColor.cpp" />
     <ClCompile Include="Actions\PlayActionFigureType.cpp" />
+    <ClCompile Include="Actions\PlayActionFigureType_FillColor.cpp" />
     <ClCompile Include="Actions\Save.cpp" />
     <ClCompile Include="Actions\SelectAction.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
@@ -198,7 +200,9 @@
     <ClInclude Include="Actions\DeletAction.h" />
     <ClInclude Include="Actions\Load.h" />
     <ClInclude Include="Actions\PasteAction.h" />
+    <ClInclude Include="Actions\PlayActionFigureFillColor.h" />
     <ClInclude Include="Actions\PlayActionFigureType.h" />
+    <ClInclude Include="Actions\PlayActionFigureType_FillColor.h" />
     <ClInclude Include="Actions\Save.h" />
     <ClInclude Include="Actions\SelectAction.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />

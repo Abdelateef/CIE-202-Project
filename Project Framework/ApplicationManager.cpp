@@ -13,6 +13,8 @@
 #include "Actions/Save.h"
 #include "Actions/Load.h"
 #include"Actions/PlayActionFigureType.h"
+#include"Actions/PlayActionFigureFillColor.h"
+#include"Actions/PlayActionFigureType_FillColor.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -104,18 +106,20 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		break;
 	case TO_PLAY:
 		pOut->CreatePlayToolBar();
+		pOut->PrintMessage("you had Switch to Play Mode");
 		break;
 	case TO_DRAW:
 		pOut->CreateDrawToolBar();
+		pOut->PrintMessage("you had Switch to Draw Mode");
 		break;
 	case HIDE_UNFILL_SHAPE:
 		pAct = new PlayActionFigureType(this);
 		break;
 	case HIDE_SMAE_COLOR:
-		pOut->Createsamecoloredselected_shape();
+		pAct = new PlayActionFigureFillColor(this);
 		break;
 	case HIDE_FILL_SHAPE:
-		pOut->Createfilledselected_shape();
+		pAct = new PlayActionFigureType_FillColor(this);
 		break;
 	case CHNG_FILL_CLR:
 		if (SelectedFig.size() != 0)
@@ -218,7 +222,8 @@ void ApplicationManager::MakeFigNull(CFigure* fig) {
 		UpdateInterface();
 
 }
- 
+
+
 int ApplicationManager::GetNUmOfSelectedFig()const
 {
 	return SelectedFig.size();
@@ -248,12 +253,46 @@ void ApplicationManager::CansSelectedFigure(CFigure* Figure)
 int ApplicationManager::GetNumOfFigType(string figtype) {
 	int cnt = 0;
 	for (int i = 0; i < GetFigurecount(); i++) {
-		if (figtype == (FigList[i]->GetName())) {
-			cnt++;
+		if (FigList[i]->GetGfxInfo().isFilled == false) {
+			if (figtype == (FigList[i]->GetName()))
+				cnt++;
+		}
+		
+	}
+	return cnt;
+}
+
+/////////////////// 
+
+int ApplicationManager::GetNumOfFigcolor(color figcolor) {
+	int cnt = 0;
+	for (int i = 0; i < GetFigurecount(); i++) {
+		if (FigList[i]->GetGfxInfo().isFilled == true) {
+			if (figcolor.ucRed == FigList[i]->GetGfxInfo().FillClr.ucRed &&
+				figcolor.ucGreen == FigList[i]->GetGfxInfo().FillClr.ucGreen &&
+				figcolor.ucBlue == FigList[i]->GetGfxInfo().FillClr.ucBlue) {
+				cnt++;
+			}
 		}
 	}
 	return cnt;
 }
+ //////////
+int  ApplicationManager::GetnumOfFigsametypecolor(string figtype, color figcolor) {
+	int cnt = 0;
+	for (int i = 0; i < GetFigurecount(); i++) {
+			if (FigList[i]->GetGfxInfo().isFilled == true) {
+				if (figcolor.ucRed == FigList[i]->GetGfxInfo().FillClr.ucRed &&
+					figcolor.ucGreen == FigList[i]->GetGfxInfo().FillClr.ucGreen &&
+					figcolor.ucBlue == FigList[i]->GetGfxInfo().FillClr.ucBlue && 
+					figtype == (FigList[i]->GetName())) {
+					cnt++;
+				}
+			}
+	}
+	return cnt;
+}
+
 
 
 

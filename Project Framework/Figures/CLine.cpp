@@ -104,3 +104,13 @@ void CLine::drawloadaction(Output* pOut,int arr[])
 string CLine::GetName() {
 	return "Line";
 }
+
+color CLine::Getcolor() {
+	if (FigGfxInfo.isFilled)
+	return FigGfxInfo.FillClr;
+}
+
+
+GfxInfo& CLine::GetGfxInfo() {
+	return FigGfxInfo;
+}

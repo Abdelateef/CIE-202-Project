@@ -95,3 +95,7 @@ void CCircle::drawloadaction(Output* pOut,int arr[])
 string CCircle::GetName() {
 	return "Circle";
 }
+
+GfxInfo& CCircle::GetGfxInfo() {
+	return FigGfxInfo;
+}

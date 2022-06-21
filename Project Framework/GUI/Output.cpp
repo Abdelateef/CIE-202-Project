@@ -177,7 +177,6 @@ void Output::CreatePlayToolBar() const
 	MenuItemImages[UNFILL_SHAPES_MODE] = "images\\MenuItems\\Menu_unfillied_shape.jpg";
 	MenuItemImages[COLOR_SHAPES_MODE] = "images\\MenuItems\\Menu_Color_shapes.jpg";
 	MenuItemImages[FILL_SHAPES_MODE] = "images\\MenuItems\\Menu_filles_shapes.jpg";
-	MenuItemImages[START] = "images\\MenuItems\\Menu_startgame.jpg";
 	MenuItemImages[RESTART] = "images\\MenuItems\\Menu_Restart.jpg";
 
 	//Draw menu item one image at a time

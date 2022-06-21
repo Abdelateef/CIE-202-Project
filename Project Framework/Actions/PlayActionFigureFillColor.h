@@ -1,19 +1,19 @@
 #pragma once
 #include"Action.h"
 #include "../Figures/\CFigure.h"
-class PlayActionFigureType : public Action {
+class PlayActionFigureFillColor : public Action {
 private:
-	string FigureType;
+	color Figurecolor;
+	string Figurecolorr;
 	ActionType subAction;
-	ActionType pointclick;
 public:
 	CFigure* FigureTypeList[200];
-	PlayActionFigureType(ApplicationManager* pApp);
+	PlayActionFigureFillColor(ApplicationManager* pApp);
 
 	virtual void ReadActionParameters();
 
 	virtual void Execute();
 
-	virtual ~PlayActionFigureType(void);
+	virtual ~PlayActionFigureFillColor(void);
 	void setFiguretype();
 };

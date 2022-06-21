@@ -98,3 +98,12 @@ void CRectangle::drawloadaction(Output* pOut,int arr[])
 string CRectangle::GetName() {
 	return "Rectangle";
 }
+color CRectangle::Getcolor() {
+	if (FigGfxInfo.isFilled)
+	return FigGfxInfo.FillClr;
+}
+
+
+GfxInfo& CRectangle::GetGfxInfo() {
+	return FigGfxInfo;
+}

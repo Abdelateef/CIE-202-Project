@@ -63,7 +63,6 @@ enum ActionType //The actions supported (you can add more if needed)
 	HIDE_UNFILL_SHAPE,
 	HIDE_SMAE_COLOR,
 	HIDE_FILL_SHAPE,
-	START_GAME,
 	RESTART_GAME,
 };
 

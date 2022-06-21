@@ -56,6 +56,10 @@ public:
 
 	virtual string GetName() = 0;
 	// Gets the figure name
+
+		/*A function to return gfx of a figure*/
+	virtual GfxInfo& GetGfxInfo() = 0;
+
 };
 
 #endif

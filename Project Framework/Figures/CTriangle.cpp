@@ -107,7 +107,14 @@ void CTriangle::drawloadaction(Output* pOut,int arr[])
 string CTriangle::GetName() {
 	return "Triangle";
 }
+color CTriangle::Getcolor() {
+	if (FigGfxInfo.isFilled)
+	return FigGfxInfo.FillClr;
+}
 
 
+GfxInfo& CTriangle::GetGfxInfo() {
+	return FigGfxInfo;
+}
 
 

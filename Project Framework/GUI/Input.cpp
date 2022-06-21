@@ -146,7 +146,6 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 				case UNFILL_SHAPES_MODE:return HIDE_UNFILL_SHAPE;
 				case COLOR_SHAPES_MODE: return HIDE_SMAE_COLOR;
 				case FILL_SHAPES_MODE: return HIDE_FILL_SHAPE;
-				case START: return START_GAME;
 				case RESTART: return RESTART_GAME;
 
 				default: return EMPTY;
@@ -236,10 +235,10 @@ ActionType Input::GetUserAction(int& X, int& Y) const
 
 				switch (ClickedItemOrder)
 				{
-				case ITM_LINEEE: return SET_BLACK;
-				case ITM_SQUAREEE: return SET_WHITE;
-				case ITM_CIRCLEEE: return SET_RED;
-				case ITM_TRIANGLEEE: return SET_GREEN;
+				case ITM_LINEEE: return HIDE_LINE;
+				case ITM_SQUAREEE: return HIDE_RECT;
+				case ITM_CIRCLEEE: return HIDE_CIRC;
+				case ITM_TRIANGLEEE: return HIDE_TRI;
 				case ITM_BLACKK: return SET_BLACK;
 				case ITM_WHITEE: return SET_WHITE;
 				case ITM_REDD: return SET_RED;

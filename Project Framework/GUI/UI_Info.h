@@ -50,7 +50,6 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 	UNFILL_SHAPES_MODE,
 	COLOR_SHAPES_MODE,
 	FILL_SHAPES_MODE,
-	START,
 	RESTART,
 	
 	PLAY_ITM_COUNT

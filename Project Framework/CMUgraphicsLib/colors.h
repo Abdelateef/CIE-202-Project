@@ -23,6 +23,7 @@ class color {
     unsigned char ucGreen;
     unsigned char ucBlue;
 
+
 };
 
 bool operator==(color a, color b);
