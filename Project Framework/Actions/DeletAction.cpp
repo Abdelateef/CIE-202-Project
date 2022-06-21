@@ -20,7 +20,7 @@ void DeletAction::ReadActionParameters() {
 	Input* pIn = pManager->GetInput();
 
 	if (pManager->GetFigurecount() == 0){
-		pOut->PrintMessage("No Figure to delete!");
+		pOut->PrintMessage("Delet Action : No Figure to delete!");
 	}
 	else {
 		CFigure* FigureList[200];
@@ -31,6 +31,7 @@ void DeletAction::ReadActionParameters() {
 			}
 			if (FigureList[i]->IsSelected()) {
 				pManager->MakeFigNull(FigureList[i]);
+				pOut->PrintMessage("Delet Action : Figure has been deleted");
 			}
 		}
 
