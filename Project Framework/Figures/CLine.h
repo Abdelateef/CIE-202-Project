@@ -28,8 +28,15 @@ public:
 
 	
 
+<<<<<<< Updated upstream
 	virtual string GetName();
 	virtual color Getcolor();
 	GfxInfo& GetGfxInfo();
 
+=======
+
+	virtual string GetName();
+	virtual color Getcolor();
+	GfxInfo& GetGfxInfo();
+>>>>>>> Stashed changes
 };
