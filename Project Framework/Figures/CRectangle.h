@@ -21,7 +21,13 @@ public:
 	int y1();
 	int y2();
 	void drawloadaction(Output* pOut,int arr[]);
+<<<<<<< Updated upstream
 	string GetName();
+=======
+	virtual string GetName();
+	virtual color Getcolor();
+	GfxInfo& GetGfxInfo();
+>>>>>>> Stashed changes
 };
 
 #endif
