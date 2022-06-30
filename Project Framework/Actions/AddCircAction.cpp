@@ -1,8 +1,6 @@
 #include "AddCircAction.h"
 #include "..\Figures\CCircle.h"
-
 #include "..\ApplicationManager.h"
-
 #include "..\GUI\input.h"
 #include "..\GUI\Output.h"
 
@@ -19,7 +17,7 @@ void AddCircAction::ReadActionParameters()
 	bool point1found = false;
 	do{
 		pIn->GetPointClicked(P1.x, P1.y);//Read 1st corner and store in point P1
-		if (P1.y >= UI.ToolBarHeight ) {
+		if (P1.y >= UI.ToolBarHeight && P1.y < UI.height - UI.StatusBarHeight) {
 			pOut->PrintMessage("New Circle: Click at second corner (take care the radius will be the difference in x coordinates of two corners)");
 			point1found = true;
 		}

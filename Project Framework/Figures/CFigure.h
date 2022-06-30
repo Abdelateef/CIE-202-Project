@@ -11,7 +11,7 @@ protected:
 	int ID;		//Each figure has an ID
 	bool Selected;	//true if the figure is selected.
 	GfxInfo FigGfxInfo;	//Figure graphis info
-	int objcount = 0;
+	int objnumbers = 0;
 	/// Add more parameters if needed.
 
 public:
@@ -32,7 +32,7 @@ public:
 	virtual int y2() = 0;
 	virtual void drawloadaction(Output* pOut,int arr[]) = 0;
 	virtual int objencoded() = 0;
-
+	int counterfig();
 	int objcountreturn();
 	virtual int thirdcornerx()=0;
 	virtual int thirdcornery()=0;

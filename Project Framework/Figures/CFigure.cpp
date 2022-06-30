@@ -2,9 +2,13 @@
 
 CFigure::CFigure(GfxInfo FigureGfxInfo)
 { 
+	static int objcount ;
+	static int starship;
 	FigGfxInfo = FigureGfxInfo;	//Default status is non-filled.
 	Selected = false;
 	objcount++;
+	starship++;
+	objnumbers = starship;
 	ID = objcount;
 }
 
@@ -31,4 +35,7 @@ int CFigure :: objcountreturn()
 	return ID;
 }
 
-
+int CFigure:: counterfig()
+{
+	return objnumbers;
+}
